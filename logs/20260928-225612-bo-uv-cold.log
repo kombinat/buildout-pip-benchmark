@@ -1,0 +1,547 @@
+
+$ <python3.13> -m venv .venv
+# exit 0 after 2.04s
+
+$ .venv/bin/pip install pip==26.2.1 setuptools==81.0.0 wheel==0.48.0 horse-with-no-namespace==20260202.0 zc.buildout==5.3.0a1 uv==0.12.19
+[    2.78] Collecting pip==26.2.1
+[    2.93]   Downloading pip-26.2.1-py3-none-any.whl.metadata (4.6 kB)
+[    3.13] Collecting setuptools==81.0.0
+[    3.17]   Downloading setuptools-81.0.0-py3-none-any.whl.metadata (6.6 kB)
+[    3.22] Collecting wheel==0.48.0
+[    3.26]   Downloading wheel-0.48.0-py3-none-any.whl.metadata (2.3 kB)
+[    3.29] Collecting horse-with-no-namespace==20260202.0
+[    3.33]   Downloading horse_with_no_namespace-20260202.0-py3-none-any.whl.metadata (4.6 kB)
+[    3.39] Collecting zc.buildout==5.3.0a1
+[    3.43]   Downloading zc_buildout-5.3.0a1-py3-none-any.whl.metadata (26 kB)
+[    3.75] Collecting uv==0.12.19
+[    3.79]   Downloading uv-0.12.19-py3-none-macosx_11_0_arm64.whl.metadata (11 kB)
+[    3.84] Collecting packaging>=24.0 (from wheel==0.48.0)
+[    3.90]   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+[    3.97] Downloading pip-26.2.1-py3-none-any.whl (1.8 MB)
+[    5.44]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 2.5 MB/s  0:00:01
+[    5.49] Downloading setuptools-81.0.0-py3-none-any.whl (1.1 MB)
+[    5.86]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 2.5 MB/s  0:00:00
+[    5.91] Downloading wheel-0.48.0-py3-none-any.whl (33 kB)
+[    5.96] Downloading horse_with_no_namespace-20260202.0-py3-none-any.whl (6.2 kB)
+[    6.01] Downloading zc_buildout-5.3.0a1-py3-none-any.whl (418 kB)
+[    6.25] Downloading uv-0.12.19-py3-none-macosx_11_0_arm64.whl (17.1 MB)
+[   11.20]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 17.1/17.1 MB 3.5 MB/s  0:00:04
+[   11.24] Downloading packaging-26.3-py3-none-any.whl (129 kB)
+[   11.35] Installing collected packages: uv, setuptools, pip, packaging, horse-with-no-namespace, wheel, zc.buildout
+[   12.98]   Attempting uninstall: pip
+[   12.98]     Found existing installation: pip 25.2
+[   13.00]     Uninstalling pip-25.2:
+[   13.01]       Successfully uninstalled pip-25.2
+[   14.68] 
+[   14.68] Successfully installed horse-with-no-namespace-20260202.0 packaging-26.3 pip-26.2.1 setuptools-81.0.0 uv-0.12.19 wheel-0.48.0 zc.buildout-5.3.0a1
+# exit 0 after 12.73s
+
+$ .venv/bin/buildout buildout:installer=uv versions:zc.buildout=5.3.0a1 versions:uv=0.12.19 versions:httpx=0.28.1 versions:httpcore=1.0.9 versions:anyio=4.14.2 versions:idna=3.18 versions:certifi=2026.7.22
+[   15.12] <string>:1: UserWarning: 🐎 This Python ([1m<bench>/runs/bo-uv/.venv/bin/python3.13[0m) uses horse-with-no-namespace to make the following pkg_resources namespace packages compatible with PEP 420 namespace packages:
+[   15.12]   
+[   15.25] <bench>/runs/bo-uv/.venv/lib/python3.13/site-packages/horse_with_no_namespace/pkg_resources.py:54: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+[   15.25]   import pkg_resources
+[   16.25] optional-extends file not found: local.cfg
+[   16.25] With installer = uv, credentials in ~/.pypirc are not used; uv reads them from ~/.netrc instead.
+[   16.25] Creating directory '<bench>/runs/bo-uv/eggs/v5'.
+[   16.25] With installer = uv, the allow-hosts option is not enforced: uv has no host allow-list (its --allow-insecure-host flag is TLS policy, not filtering).
+[   16.25] Getting distribution for 'mr.developer==3.0.0'.
+[   16.25] Getting distribution for 'plone.versioncheck==2.0.1'.
+[   18.04] Got mr.developer 3.0.0.
+[   18.04] Got plone.versioncheck 2.0.1.
+[   18.04] Got anyio 4.14.2.
+[   18.04] Got certifi 2026.7.22.
+[   18.04] Got colorama 0.4.6.
+[   18.04] Got h11 0.16.0.
+[   18.04] Got httpcore 1.0.9.
+[   18.04] Got httpx 0.28.1.
+[   18.04] Got idna 3.18.
+[   18.04] Got Jinja2 3.1.6.
+[   18.04] Got MarkupSafe 3.0.3.
+[   18.24] mr.developer: Queued 'Plone' for checkout.
+[   18.54] mr.developer: Queued 'Products.CMFPlone' for checkout.
+[   18.71] mr.developer: Queued 'mockup' for checkout.
+[   20.26] mr.developer: Queued 'plone.app.locales' for checkout.
+[   20.32] mr.developer: Queued 'plone.app.upgrade' for checkout.
+[   21.25] mr.developer: Queued 'plone.restapi' for checkout.
+[   22.41] mr.developer: Updated 'Plone' with git.
+[   22.41] mr.developer: Switching to branch '6.2.x'.
+[   22.42] mr.developer: Updated 'plone.app.upgrade' with git.
+[   22.42] mr.developer: Switching to branch 'master'.
+[   22.79] mr.developer: Updated 'mockup' with git.
+[   22.79] mr.developer: Switching to branch '5.6.x'.
+[   22.90] mr.developer: Updated 'plone.app.locales' with git.
+[   22.90] mr.developer: Switching to branch 'master'.
+[   23.01] mr.developer: Updated 'Products.CMFPlone' with git.
+[   23.01] mr.developer: Switching to branch '6.2.x'.
+[   23.61] mr.developer: Updated 'plone.restapi' with git.
+[   23.61] mr.developer: Switching to branch 'main'.
+[   23.61] Creating directory '<bench>/runs/bo-uv/bin'.
+[   23.61] Creating directory '<bench>/runs/bo-uv/parts'.
+[   23.61] Creating directory '<bench>/runs/bo-uv/develop-eggs'.
+[   23.62] Develop: '<bench>/runs/bo-uv/src/Plone'
+[   24.88] Develop: '<bench>/runs/bo-uv/src/plone.app.locales'
+[   26.31] Develop: '<bench>/runs/bo-uv/src/plone.app.upgrade'
+[   27.02] Develop: '<bench>/runs/bo-uv/src/plone.restapi'
+[   27.84] Develop: '<bench>/runs/bo-uv/src/Products.CMFPlone'
+[   28.61] Getting distribution for 'zc.recipe.egg==4.0.0'.
+[   29.50] Got zc.recipe.egg 4.0.0.
+[   29.50] <bench>/runs/bo-uv/.venv/lib/python3.13/site-packages/zc/buildout/easy_install.py:1687: UserWarning: Module zc was already imported from None, but <bench>/runs/bo-uv/eggs/v5/zc.recipe.egg-4.0.0-py3.13-macosx-26.6-arm64.egg is being added to sys.path
+[   29.50]   ws.add(dist, replace=True)
+[   29.52] Getting distribution for 'plone.recipe.zope2instance==9.1.0'.
+[   36.45] Got plone.recipe.zope2instance 9.1.0.
+[   36.45] <bench>/runs/bo-uv/.venv/lib/python3.13/site-packages/zc/buildout/easy_install.py:1687: UserWarning: Module plone was already imported from None, but <bench>/runs/bo-uv/eggs/v5/plone.recipe.zope2instance-9.1.0-py3.13-macosx-26.6-arm64.egg is being added to sys.path
+[   36.45]   ws.add(dist, replace=True)
+[   36.45] Got AccessControl 7.4.
+[   36.45] Got Acquisition 6.2.
+[   36.45] Got AuthEncoding 6.0.
+[   36.45] Got beautifulsoup4 4.15.0.
+[   36.45] Got BTrees 6.4.
+[   36.45] Got cffi 2.1.1.
+[   36.45] Got Chameleon 4.6.0.
+[   36.45] Got DateTime 6.0.
+[   36.45] Got DocumentTemplate 5.3.
+[   36.45] Got ExtensionClass 6.3.
+[   36.45] Got legacy-cgi 2.6.4.
+[   36.45] Got MultiMapping 5.1.
+[   36.45] Got multipart 2.0.0.
+[   36.45] Got Paste 3.10.1.
+[   36.45] Got PasteDeploy 3.1.0.
+[   36.45] Got Persistence 5.4.
+[   36.45] Got persistent 6.7.
+[   36.45] Got pycparser 3.0.
+[   36.45] Got python-dotenv 1.2.3.
+[   36.45] Got python-gettext 5.0.
+[   36.45] Got pytz 2026.3.post1.
+[   36.45] Got RestrictedPython 8.5.
+[   36.45] Got roman 5.2.
+[   36.45] Got soupsieve 2.9.1.
+[   36.45] Got transaction 5.1.
+[   36.45] Got typing-extensions 4.16.0.
+[   36.45] Got waitress 3.0.2.
+[   36.45] Got WebOb 1.8.11.
+[   36.45] Got WebTest 3.0.7.
+[   36.45] Got WSGIProxy2 0.5.1.
+[   36.45] Got z3c.pt 5.1.
+[   36.45] Got zc.lockfile 4.0.
+[   36.45] <bench>/runs/bo-uv/.venv/lib/python3.13/site-packages/zc/buildout/easy_install.py:1687: UserWarning: Module zc was already imported from None, but <bench>/runs/bo-uv/eggs/v5/zc.lockfile-4.0-py3.13-macosx-26.6-arm64.egg is being added to sys.path
+[   36.45]   ws.add(dist, replace=True)
+[   36.45] Got ZConfig 4.3.
+[   36.45] Got zdaemon 5.2.1.
+[   36.45] Got ZEO 6.2.
+[   36.45] Got zExceptions 6.0.
+[   36.45] Got ZODB 6.3.
+[   36.45] Got zodbpickle 4.4.
+[   36.45] Got Zope 6.2.
+[   36.45] Got zope.annotation 6.0.
+[   36.45] Got zope.browser 4.0.
+[   36.45] Got zope.browsermenu 6.0.
+[   36.45] Got zope.browserpage 6.0.
+[   36.45] Got zope.browserresource 6.0.
+[   36.45] Got zope.cachedescriptors 6.0.
+[   36.45] Got zope.component 7.1.
+[   36.45] Got zope.configuration 7.1.
+[   36.45] Got zope.container 7.2.
+[   36.45] Got zope.contentprovider 7.0.
+[   36.45] Got zope.contenttype 6.0.
+[   36.45] Got zope.datetime 6.0.
+[   36.45] Got zope.deferredimport 6.1.1.
+[   36.45] Got zope.deprecation 6.0.
+[   36.45] Got zope.dottedname 7.1.
+[   36.45] Got zope.event 6.2.
+[   36.45] Got zope.exceptions 6.0.
+[   36.45] Got zope.filerepresentation 7.0.
+[   36.45] Got zope.globalrequest 3.0.
+[   36.45] Got zope.hookable 8.2.
+[   36.45] Got zope.i18n 6.0.
+[   36.45] Got zope.i18nmessageid 8.2.
+[   36.45] Got zope.interface 8.5.
+[   36.45] Got zope.lifecycleevent 6.0.
+[   36.45] Got zope.location 6.0.
+[   36.45] Got zope.pagetemplate 6.1.
+[   36.45] Got zope.processlifetime 4.0.
+[   36.45] Got zope.proxy 7.2.
+[   36.45] Got zope.ptresource 6.0.
+[   36.45] Got zope.publisher 8.1.
+[   36.45] Got zope.schema 8.1.
+[   36.45] Got zope.security 8.3.
+[   36.45] Got zope.sequencesort 6.0.
+[   36.45] Got zope.site 6.0.
+[   36.45] Got zope.size 6.0.
+[   36.45] Got zope.structuredtext 6.0.
+[   36.45] Got zope.tal 6.0.
+[   36.45] Got zope.tales 7.0.
+[   36.45] Got zope.testbrowser 8.0.
+[   36.45] Got zope.testing 6.2.
+[   36.45] Got zope.traversing 6.0.
+[   36.45] Got zope.viewlet 6.0.
+[   36.57] Getting distribution for 'zc.recipe.testrunner==4.2.post1'.
+[   37.87] Got zc.recipe.testrunner 4.2.post1.
+[   37.87] <bench>/runs/bo-uv/.venv/lib/python3.13/site-packages/zc/buildout/easy_install.py:1687: UserWarning: Module zc was already imported from None, but <bench>/runs/bo-uv/eggs/v5/zc.recipe.testrunner-4.2.post1-py3.13-macosx-26.6-arm64.egg is being added to sys.path
+[   37.87]   ws.add(dist, replace=True)
+[   37.87] Got zope.testrunner 8.3.
+[   37.91] Getting distribution for 'collective.recipe.omelette==3.0.0'.
+[   38.94] Got collective.recipe.omelette 3.0.0.
+[   38.98] Getting distribution for 'collective.recipe.vscode==0.1.9'.
+[   40.34] Got collective.recipe.vscode 0.1.9.
+[   41.03] Installing _mr.developer.
+[   41.05] Generated script '<bench>/runs/bo-uv/bin/develop'.
+[   41.05] Installing instance.
+[   41.16] Getting distribution for 'zodbverify==1.2.1'.
+[   41.16] Getting distribution for 'pdbpp==0.12.1'.
+[   41.16] Getting distribution for 'Products.CMFPlacefulWorkflow==4.0.0'.
+[   41.16] Getting distribution for 'plone.volto==6.0.1'.
+[   41.16] Getting distribution for 'plone.classicui==2.0.0'.
+[   41.16] Getting distribution for 'plone.app.multilingual==9.0.2'.
+[   41.16] Getting distribution for 'plone.app.iterate==7.0.0'.
+[   41.16] Getting distribution for 'plone.app.discussion==6.0.1'.
+[   41.16] Getting distribution for 'plone.app.caching==5.0.0'.
+[   41.16] Getting distribution for 'zope.ramcache==4.0'.
+[   41.16] Getting distribution for 'zope.intid==6.0'.
+[   41.16] Getting distribution for 'zope.app.locales==6.0'.
+[   41.16] Getting distribution for 'zc.relation==3.0'.
+[   41.16] Getting distribution for 'z3c.relationfield==3.1'.
+[   41.16] Getting distribution for 'z3c.form==6.1'.
+[   41.16] Getting distribution for 'z3c.caching==4.0'.
+[   41.16] Getting distribution for 'webresource==2.0.0'.
+[   41.16] Getting distribution for 'Products.ZCatalog==7.4'.
+[   41.16] Getting distribution for 'Products.statusmessages==6.0.0'.
+[   41.16] Getting distribution for 'Products.SiteErrorLog==7.0'.
+[   41.16] Getting distribution for 'Products.PortalTransforms==5.0.0'.
+[   41.16] Getting distribution for 'Products.PluggableAuthService==4.2.2'.
+[   41.16] Getting distribution for 'Products.PlonePAS==9.0.0'.
+[   41.16] Getting distribution for 'Products.MimetypesRegistry==4.0.0'.
+[   41.16] Getting distribution for 'Products.isurlinportal==4.0.0'.
+[   41.16] Getting distribution for 'Products.ExtendedPathIndex==6.0.0'.
+[   41.16] Getting distribution for 'Products.DCWorkflow==4.0'.
+[   41.16] Getting distribution for 'Products.CMFCore==3.8'.
+[   41.16] Getting distribution for 'Products.CMFEditions==5.0.0'.
+[   41.16] Getting distribution for 'plonetheme.barceloneta==4.1.1'.
+[   41.16] Getting distribution for 'plone.uuid==3.0.0'.
+[   41.16] Getting distribution for 'plone.theme==5.0.0'.
+[   41.16] Getting distribution for 'plone.subrequest==3.0.0'.
+[   41.16] Getting distribution for 'plone.staticresources==3.0.9'.
+[   41.16] Getting distribution for 'plone.session==5.1.0'.
+[   41.16] Getting distribution for 'plone.schema==3.0.0'.
+[   41.16] Getting distribution for 'plone.rfc822==4.0.0'.
+[   41.16] Getting distribution for 'plone.resource==4.0.0'.
+[   41.16] Getting distribution for 'plone.protect==6.0.0'.
+[   41.16] Getting distribution for 'plone.portlets==4.0.0'.
+[   41.16] Getting distribution for 'plone.portlet.static==5.0.0'.
+[   41.16] Getting distribution for 'plone.portlet.collection==5.0.1'.
+[   41.16] Getting distribution for 'plone.outputfilters==6.0.1'.
+[   41.16] Getting distribution for 'plone.namedfile==8.1.1'.
+[   41.16] Getting distribution for 'plone.memoize==4.0.0'.
+[   41.16] Getting distribution for 'plone.locking==4.0.0'.
+[   41.16] Getting distribution for 'plone.keyring==5.0.0'.
+[   41.16] Getting distribution for 'plone.intelligenttext==5.0.0'.
+[   41.16] Getting distribution for 'plone.indexer==3.0.0'.
+[   41.16] Getting distribution for 'plone.i18n==6.0.0'.
+[   41.16] Getting distribution for 'plone.formwidget.namedfile==4.0.0'.
+[   41.16] Getting distribution for 'plone.folder==5.0.0'.
+[   41.16] Getting distribution for 'plone.dexterity==4.0.0'.
+[   41.16] Getting distribution for 'plone.contentrules==4.0.0'.
+[   41.16] Getting distribution for 'plone.browserlayer==4.0.0'.
+[   41.16] Getting distribution for 'plone.base==4.0.2'.
+[   41.16] Getting distribution for 'plone.autoinclude==3.0.0'.
+[   41.16] Getting distribution for 'plone.autoform==3.0.1'.
+[   41.16] Getting distribution for 'plone.app.z3cform==5.0.2'.
+[   41.16] Getting distribution for 'plone.app.workflow==6.0.0'.
+[   41.16] Getting distribution for 'plone.app.vocabularies==7.0.0'.
+[   41.16] Getting distribution for 'plone.app.viewletmanager==5.0.0'.
+[   41.16] Getting distribution for 'plone.app.uuid==3.0.0'.
+[   41.16] Getting distribution for 'plone.app.users==4.0.0'.
+[   41.16] Getting distribution for 'plone.app.theming==7.0.1'.
+[   41.16] Getting distribution for 'plone.app.registry==3.0.1'.
+[   41.16] Getting distribution for 'plone.app.relationfield==5.0.0'.
+[   41.16] Getting distribution for 'plone.app.redirector==4.0.0'.
+[   41.16] Getting distribution for 'plone.app.portlets==7.0.2'.
+[   41.16] Getting distribution for 'plone.app.linkintegrity==5.0.0'.
+[   41.16] Getting distribution for 'plone.app.layout==6.0.2'.
+[   41.16] Getting distribution for 'plone.app.i18n==5.0.0'.
+[   41.16] Getting distribution for 'plone.app.dexterity==5.0.2'.
+[   41.16] Getting distribution for 'plone.app.customerize==3.0.1'.
+[   41.16] Getting distribution for 'plone.app.contenttypes==5.0.1'.
+[   41.16] Getting distribution for 'plone.app.contentrules==6.0.0'.
+[   41.16] Getting distribution for 'plone.app.contentmenu==4.0.0'.
+[   41.16] Getting distribution for 'plone.app.contentlisting==4.0.0'.
+[   41.16] Getting distribution for 'plone.app.content==5.0.0'.
+[   41.16] Getting distribution for 'lxml==6.1.3'.
+[   41.16] Getting distribution for 'five.intid==3.1.0'.
+[   41.16] Getting distribution for 'five.customerize==4.1'.
+[   41.16] Getting distribution for 'borg.localrole==5.0.1'.
+[   41.16] Getting distribution for 'PyJWT==2.13.0'.
+[   41.16] Getting distribution for 'plone.rest==6.0.0'.
+[   41.16] Getting distribution for 'plone.api==3.0.3'.
+[   41.16] Getting distribution for 'python-dateutil==2.9.0.post0'.
+[   41.16] Getting distribution for 'plone.registry==3.0.1'.
+[   41.16] Getting distribution for 'Products.GenericSetup==5.2'.
+[   71.58] Got zodbverify 1.2.1.
+[   71.58] Got pdbpp 0.12.1.
+[   71.58] Got Products.CMFPlacefulWorkflow 4.0.0.
+[   71.58] Got plone.volto 6.0.1.
+[   71.58] Got plone.classicui 2.0.0.
+[   71.58] Got plone.app.multilingual 9.0.2.
+[   71.58] Got plone.app.iterate 7.0.0.
+[   71.58] Got plone.app.discussion 6.0.1.
+[   71.58] Got plone.app.caching 5.0.0.
+[   71.58] Got zope.ramcache 4.0.
+[   71.58] Got zope.intid 6.0.
+[   71.58] Got zope.app.locales 6.0.
+[   71.58] Got zc.relation 3.0.
+[   71.58] Got z3c.relationfield 3.1.
+[   71.58] Got z3c.form 6.1.
+[   71.58] Got z3c.caching 4.0.
+[   71.58] Got webresource 2.0.0.
+[   71.58] Got Products.ZCatalog 7.4.
+[   71.58] Got Products.statusmessages 6.0.0.
+[   71.58] Got Products.SiteErrorLog 7.0.
+[   71.58] Got Products.PortalTransforms 5.0.0.
+[   71.58] Got Products.PluggableAuthService 4.2.2.
+[   71.58] Got Products.PlonePAS 9.0.0.
+[   71.58] Got Products.MimetypesRegistry 4.0.0.
+[   71.58] Got Products.isurlinportal 4.0.0.
+[   71.58] Got Products.ExtendedPathIndex 6.0.0.
+[   71.58] Got Products.DCWorkflow 4.0.
+[   71.58] Got Products.CMFCore 3.8.
+[   71.58] Got Products.CMFEditions 5.0.0.
+[   71.58] Got plonetheme.barceloneta 4.1.1.
+[   71.58] Got plone.uuid 3.0.0.
+[   71.58] Got plone.theme 5.0.0.
+[   71.58] Got plone.subrequest 3.0.0.
+[   71.58] Got plone.staticresources 3.0.9.
+[   71.58] Got plone.session 5.1.0.
+[   71.58] Got plone.schema 3.0.0.
+[   71.58] Got plone.rfc822 4.0.0.
+[   71.58] Got plone.resource 4.0.0.
+[   71.58] Got plone.protect 6.0.0.
+[   71.58] Got plone.portlets 4.0.0.
+[   71.58] Got plone.portlet.static 5.0.0.
+[   71.58] Got plone.portlet.collection 5.0.1.
+[   71.58] Got plone.outputfilters 6.0.1.
+[   71.58] Got plone.namedfile 8.1.1.
+[   71.58] Got plone.memoize 4.0.0.
+[   71.58] Got plone.locking 4.0.0.
+[   71.58] Got plone.keyring 5.0.0.
+[   71.58] Got plone.intelligenttext 5.0.0.
+[   71.58] Got plone.indexer 3.0.0.
+[   71.58] Got plone.i18n 6.0.0.
+[   71.58] Got plone.formwidget.namedfile 4.0.0.
+[   71.58] Got plone.folder 5.0.0.
+[   71.58] Got plone.dexterity 4.0.0.
+[   71.58] Got plone.contentrules 4.0.0.
+[   71.58] Got plone.browserlayer 4.0.0.
+[   71.58] Got plone.base 4.0.2.
+[   71.58] Got plone.autoinclude 3.0.0.
+[   71.58] Got plone.autoform 3.0.1.
+[   71.58] Got plone.app.z3cform 5.0.2.
+[   71.58] Got plone.app.workflow 6.0.0.
+[   71.58] Got plone.app.vocabularies 7.0.0.
+[   71.58] Got plone.app.viewletmanager 5.0.0.
+[   71.58] Got plone.app.uuid 3.0.0.
+[   71.58] Got plone.app.users 4.0.0.
+[   71.58] Got plone.app.theming 7.0.1.
+[   71.58] Got plone.app.registry 3.0.1.
+[   71.58] Got plone.app.relationfield 5.0.0.
+[   71.58] Got plone.app.redirector 4.0.0.
+[   71.58] Got plone.app.portlets 7.0.2.
+[   71.58] Got plone.app.linkintegrity 5.0.0.
+[   71.58] Got plone.app.layout 6.0.2.
+[   71.58] Got plone.app.i18n 5.0.0.
+[   71.58] Got plone.app.dexterity 5.0.2.
+[   71.58] Got plone.app.customerize 3.0.1.
+[   71.58] Got plone.app.contenttypes 5.0.1.
+[   71.58] Got plone.app.contentrules 6.0.0.
+[   71.58] Got plone.app.contentmenu 4.0.0.
+[   71.58] Got plone.app.contentlisting 4.0.0.
+[   71.58] Got plone.app.content 5.0.0.
+[   71.58] Got lxml 6.1.3.
+[   71.58] Got five.intid 3.1.0.
+[   71.58] Got five.customerize 4.1.
+[   71.58] Got borg.localrole 5.0.1.
+[   71.58] Got PyJWT 2.13.0.
+[   71.58] Got plone.rest 6.0.0.
+[   71.58] Got plone.api 3.0.3.
+[   71.58] Got python-dateutil 2.9.0.post0.
+[   71.58] Got plone.registry 3.0.1.
+[   71.58] Got Products.GenericSetup 5.2.
+[   71.58] Got attrs 26.1.0.
+[   71.58] Got charset-normalizer 3.4.9.
+[   71.58] Got collective.monkeypatcher 3.0.0.
+[   71.58] Got cssselect 1.5.0.
+[   71.58] Got decorator 5.3.1.
+[   71.58] Got diazo 2.0.6.
+[   71.58] Got docutils 0.22.4.
+[   71.58] Got fancycompleter 0.11.1.
+[   71.58] Got feedparser 6.0.14.
+[   71.58] Got feedparser-sgmllib 2.1.0.
+[   71.58] Got five.localsitemanager 5.0.
+[   71.58] Got icalendar 7.3.0.
+[   71.58] Got jsonschema 4.26.0.
+[   71.58] Got jsonschema-specifications 2025.9.1.
+[   71.58] Got lxml-html-clean 0.4.5.
+[   71.58] Got Markdown 3.10.3.
+[   71.58] Got Missing 5.2.
+[   71.58] Got piexif 1.1.3.
+[   71.58] Got pillow 12.3.0.
+[   71.58] Got plone.alterego 3.0.0.
+[   71.58] Got plone.app.event 6.0.1.
+[   71.58] Got plone.app.intid 3.0.0.
+[   71.58] Got plone.app.lockingbehavior 3.0.0.
+[   71.58] Got plone.app.querystring 3.0.0.
+[   71.58] Got plone.app.textfield 4.0.2.
+[   71.58] Got plone.app.versioningbehavior 3.0.0.
+[   71.58] Got plone.batching 3.0.1.
+[   71.58] Got plone.behavior 3.0.1.
+[   71.58] Got plone.cachepurging 4.0.0.
+[   71.58] Got plone.caching 3.0.0.
+[   71.58] Got plone.distribution 4.0.0.
+[   71.58] Got plone.event 3.0.0.
+[   71.58] Got plone.exportimport 2.1.0.
+[   71.58] Got plone.formwidget.recurrence 4.0.0.
+[   71.58] Got plone.resourceeditor 5.0.0.
+[   71.58] Got plone.scale 5.1.0.
+[   71.58] Got plone.schemaeditor 5.0.1.
+[   71.58] Got plone.stringinterp 3.0.0.
+[   71.58] Got plone.supermodel 3.0.0.
+[   71.58] Got plone.transformchain 4.0.0.
+[   71.58] Got plone.z3cform 3.0.0.
+[   71.58] Got Products.BTreeFolder2 6.0.
+[   71.58] Got Products.CMFDiffTool 5.0.0.
+[   71.58] Got Products.CMFDynamicViewFTI 8.0.0.
+[   71.58] Got Products.CMFUid 5.0.
+[   71.58] Got Products.DateRecurringIndex 4.0.0.
+[   71.58] Got Products.ExternalMethod 6.1.
+[   71.58] Got Products.MailHost 6.1.
+[   71.58] Got Products.PluginRegistry 3.1.
+[   71.58] Got Products.PythonScripts 5.3.1.
+[   71.58] Got Products.Sessions 6.2.
+[   71.58] Got Products.StandardCacheManagers 6.1.
+[   71.58] Got Products.ZopeVersionControl 5.1.
+[   71.58] Got Pygments 2.20.0.
+[   71.58] Got Record 4.2.
+[   71.58] Got referencing 0.37.0.
+[   71.58] Got repoze.xmliter 2.0.
+[   71.58] Got requests 2.34.2.
+[   71.58] Got rpds-py 2026.6.3.
+[   71.58] Got simplejson 4.1.2.
+[   71.58] Got six 1.17.0.
+[   71.58] Got tzdata 2026.3.
+[   71.58] Got Unidecode 1.4.0.
+[   71.58] Got urllib3 2.7.0.
+[   71.58] Got z3c.formwidget.query 3.0.
+[   71.58] Got z3c.objpath 3.0.
+[   71.58] Got z3c.unconfigure 3.0.
+[   71.58] Got z3c.zcmlhook 3.0.
+[   71.58] Got zope.componentvocabulary 4.0.
+[   71.58] Got zope.copy 6.0.
+[   71.58] Got zope.keyreference 7.0.
+[   71.58] Got zope.sendmail 7.2.
+[   71.87] Generated script '<bench>/runs/bo-uv/bin/instance'.
+[   71.88] Generated interpreter '<bench>/runs/bo-uv/parts/instance/bin/interpreter'.
+[   72.31] Generated script '<bench>/runs/bo-uv/bin/zodbverify'.
+[   72.32] Installing test.
+[   72.67] Getting distribution for 'plone.app.robotframework[test]==3.0.0'.
+[   72.67] Getting distribution for 'plone.app.testing[test]==8.0.2'.
+[   72.67] Getting distribution for 'plone.app.widgets[test]==6.0.0'.
+[   72.67] Getting distribution for 'plone.testing[test]==10.1.0'.
+[   72.67] Getting distribution for 'robotsuite==3.0.1'.
+[   72.67] Getting distribution for 'robotframework-debuglibrary==2.5.0'.
+[   72.67] Getting distribution for 'pytest-plone==1.1.0; extra == "test"'.
+[   72.67] Getting distribution for 'responses==0.26.3; extra == "test"'.
+[   72.67] Getting distribution for 'manuel==1.13.0; extra == "test"'.
+[   72.67] Getting distribution for 'robotsuite==3.0.1; extra == "test"'.
+[   72.67] Getting distribution for 'collective.MockMailHost==4.0.0'.
+[   72.67] Getting distribution for 'pytest-cov==7.1.0; extra == "test"'.
+[   72.67] Getting distribution for 'pytest==9.1.1; extra == "test"'.
+[   72.67] Getting distribution for 'zestreleaser.towncrier==2.0.1; extra == "test"'.
+[   72.67] Getting distribution for 'zest.releaser[recommended]==9.9.1; extra == "test"'.
+[   83.78] Got plone.app.robotframework 3.0.0.
+[   83.78] Got plone.app.testing 8.0.2.
+[   83.78] Got plone.app.widgets 6.0.0.
+[   83.78] Got plone.testing 10.1.0.
+[   83.78] Got robotsuite 3.0.1.
+[   83.78] Got robotframework-debuglibrary 2.5.0.
+[   83.78] Got pytest-plone 1.1.0.
+[   83.78] Got responses 0.26.3.
+[   83.78] Got manuel 1.13.0.
+[   83.78] Got collective.MockMailHost 4.0.0.
+[   83.78] Got pytest-cov 7.1.0.
+[   83.78] Got pytest 9.1.1.
+[   83.78] Got zestreleaser.towncrier 2.0.1.
+[   83.78] Got zest.releaser 9.9.1.
+[   83.78] Got babel 2.18.0.
+[   83.78] Got build 1.6.0.
+[   83.78] Got check-manifest 0.51.
+[   83.78] Got click 8.5.0.
+[   83.78] Got cmarkgfm 2025.10.22.
+[   83.78] Got coverage 7.16.0.
+[   83.78] Got furl 2.1.4.
+[   83.78] Got grpcio 1.81.0.
+[   83.78] Got grpcio-tools 1.81.0.
+[   83.78] Got id 1.6.1.
+[   83.78] Got importlib-metadata 9.0.1.
+[   83.78] Got iniconfig 2.3.0.
+[   83.78] Got jaraco.classes 3.4.0.
+[   83.78] Got jaraco.context 6.1.2.
+[   83.78] Got jaraco.functools 4.6.0.
+[   83.78] Got keyring 25.7.0.
+[   83.78] Got markdown-it-py 4.2.0.
+[   83.78] Got mdurl 0.1.2.
+[   83.78] Got mock 5.2.0.
+[   83.78] Got more-itertools 11.1.0.
+[   83.78] Got natsort 8.4.0.
+[   83.78] Got nh3 0.3.7.
+[   83.78] Got orderedmultidict 1.0.2.
+[   83.78] Got outcome 1.3.0.post0.
+[   83.78] Got overrides 7.7.0.
+[   83.78] Got pep440 0.1.2.
+[   83.78] Got pluggy 1.6.0.
+[   83.78] Got prompt-toolkit 3.0.53.
+[   83.78] Got protobuf 6.33.6.
+[   83.78] Got psutil 7.2.2.
+[   83.78] Got pyproject-hooks 1.2.0.
+[   83.78] Got pyroma 5.0.1.
+[   83.78] Got PySocks 1.7.1.
+[   83.78] Got PyYAML 6.0.3.
+[   83.78] Got readme-renderer 44.0.
+[   83.78] Got requests-toolbelt 1.0.0.
+[   83.78] Got rfc3986 2.0.0.
+[   83.78] Got rich 15.0.0.
+[   83.78] Got robotframework 7.3.2.
+[   83.78] Got robotframework-assertion-engine 5.0.1.
+[   83.78] Got robotframework-browser 20.0.0.
+[   83.78] Got robotframework-pythonlibcore 4.6.0.
+[   83.78] Got robotframework-selenium2library 3.0.0.
+[   83.78] Got robotframework-seleniumlibrary 6.9.0.
+[   83.78] Got robotframework-seleniumtestability 2.1.0.
+[   83.78] Got seedir 0.5.1.
+[   83.78] Got selenium 4.44.0.
+[   83.78] Got sniffio 1.3.1.
+[   83.78] Got sortedcontainers 2.4.0.
+[   83.78] Got towncrier 26.9.0.
+[   83.78] Got trio 0.34.0.
+[   83.78] Got trio-websocket 0.12.2.
+[   83.78] Got trove-classifiers 2026.6.1.19.
+[   83.78] Got twine 7.0.0.
+[   83.78] Got wcwidth 0.8.3.
+[   83.78] Got websocket-client 1.9.2.
+[   83.78] Got wrapt 2.4.0.
+[   83.78] Got wsproto 1.3.2.
+[   83.78] Got zipp 4.1.0.
+[   83.78] Got zope.pytestlayer 9.2.
+[   83.95] While:
+[   83.95]   Installing test.
+[   83.95]   Getting distribution for 'plone.app.robotframework[test]==3.0.0'.
+[   83.95] Error: Picked: grpcio = 1.81.0
+[   83.95] 
+[   83.95] The `grpcio` egg does not have a version pin and `allow-picked-versions = false`.
+[   83.95] 
+[   83.95] To resolve this, add
+[   83.95] 
+[   83.95]     grpcio = 1.81.0
+[   83.95] 
+[   83.95] to the [versions] section,
+[   83.95] 
+[   83.95] OR set `allow-picked-versions = true`.
+# exit 1 after 69.23s

@@ -1,0 +1,158 @@
+
+$ <python3.13> -m venv .venv
+# exit 0 after 1.34s
+
+$ .venv/bin/pip install pip==26.2.1 setuptools==81.0.0 wheel==0.48.0 horse-with-no-namespace==20260202.0 zc.buildout==5.3.0a1 uv==0.12.19
+[    2.16] Collecting pip==26.2.1
+[    2.16]   Using cached pip-26.2.1-py3-none-any.whl.metadata (4.6 kB)
+[    2.24] Collecting setuptools==81.0.0
+[    2.24]   Using cached setuptools-81.0.0-py3-none-any.whl.metadata (6.6 kB)
+[    2.27] Collecting wheel==0.48.0
+[    2.27]   Using cached wheel-0.48.0-py3-none-any.whl.metadata (2.3 kB)
+[    2.30] Collecting horse-with-no-namespace==20260202.0
+[    2.30]   Using cached horse_with_no_namespace-20260202.0-py3-none-any.whl.metadata (4.6 kB)
+[    2.33] Collecting zc.buildout==5.3.0a1
+[    2.33]   Using cached zc_buildout-5.3.0a1-py3-none-any.whl.metadata (26 kB)
+[    2.48] Collecting uv==0.12.19
+[    2.48]   Using cached uv-0.12.19-py3-none-macosx_11_0_arm64.whl.metadata (11 kB)
+[    2.51] Collecting packaging>=24.0 (from wheel==0.48.0)
+[    2.51]   Using cached packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+[    2.54] Using cached pip-26.2.1-py3-none-any.whl (1.8 MB)
+[    2.59] Using cached setuptools-81.0.0-py3-none-any.whl (1.1 MB)
+[    2.62] Using cached wheel-0.48.0-py3-none-any.whl (33 kB)
+[    2.62] Using cached horse_with_no_namespace-20260202.0-py3-none-any.whl (6.2 kB)
+[    2.62] Using cached zc_buildout-5.3.0a1-py3-none-any.whl (418 kB)
+[    2.63] Using cached uv-0.12.19-py3-none-macosx_11_0_arm64.whl (17.1 MB)
+[    3.06] Using cached packaging-26.3-py3-none-any.whl (129 kB)
+[    3.08] Installing collected packages: uv, setuptools, pip, packaging, horse-with-no-namespace, wheel, zc.buildout
+[    4.48]   Attempting uninstall: pip
+[    4.48]     Found existing installation: pip 25.2
+[    4.49]     Uninstalling pip-25.2:
+[    4.50]       Successfully uninstalled pip-25.2
+[    5.25] 
+[    5.25] Successfully installed horse-with-no-namespace-20260202.0 packaging-26.3 pip-26.2.1 setuptools-81.0.0 uv-0.12.19 wheel-0.48.0 zc.buildout-5.3.0a1
+# exit 0 after 3.96s
+
+$ .venv/bin/buildout buildout:eggs-directory=<bench>/caches/bo-pip/eggs versions:zc.buildout=5.3.0a1 versions:uv=0.12.19 versions:httpcore=1.0.9 versions:grpcio=1.81.0 versions:grpcio-tools=1.81.0 versions:protobuf=6.33.6
+[    5.52] <string>:1: UserWarning: 🐎 This Python ([1m<bench>/runs/bo-pip/.venv/bin/python3.13[0m) uses horse-with-no-namespace to make the following pkg_resources namespace packages compatible with PEP 420 namespace packages:
+[    5.52]   
+[    5.58] <bench>/runs/bo-pip/.venv/lib/python3.13/site-packages/horse_with_no_namespace/pkg_resources.py:54: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+[    5.58]   import pkg_resources
+[    6.40] optional-extends file not found: local.cfg
+[    6.40] mr.developer: Queued 'Plone' for checkout.
+[    6.69] mr.developer: Queued 'Products.CMFPlone' for checkout.
+[    6.87] mr.developer: Queued 'mockup' for checkout.
+[    8.26] mr.developer: Queued 'plone.app.locales' for checkout.
+[    8.32] mr.developer: Queued 'plone.app.upgrade' for checkout.
+[    9.28] mr.developer: Queued 'plone.restapi' for checkout.
+[   10.37] mr.developer: Updated 'Plone' with git.
+[   10.37] mr.developer: Switching to branch '6.2.x'.
+[   10.54] mr.developer: Updated 'plone.app.upgrade' with git.
+[   10.54] mr.developer: Switching to branch 'master'.
+[   10.79] mr.developer: Updated 'mockup' with git.
+[   10.79] mr.developer: Switching to branch '5.6.x'.
+[   10.93] mr.developer: Updated 'plone.app.locales' with git.
+[   10.93] mr.developer: Switching to branch 'master'.
+[   11.00] mr.developer: Updated 'Products.CMFPlone' with git.
+[   11.00] mr.developer: Switching to branch '6.2.x'.
+[   11.65] mr.developer: Updated 'plone.restapi' with git.
+[   11.65] mr.developer: Switching to branch 'main'.
+[   11.69] Creating directory '<bench>/runs/bo-pip/bin'.
+[   11.69] Creating directory '<bench>/runs/bo-pip/parts'.
+[   11.69] Creating directory '<bench>/runs/bo-pip/develop-eggs'.
+[   11.73] Develop: '<bench>/runs/bo-pip/src/Plone'
+[   12.78] Develop: '<bench>/runs/bo-pip/src/plone.app.locales'
+[   14.22] Develop: '<bench>/runs/bo-pip/src/plone.app.upgrade'
+[   15.34] Develop: '<bench>/runs/bo-pip/src/plone.restapi'
+[   16.51] Develop: '<bench>/runs/bo-pip/src/Products.CMFPlone'
+[   17.68] <bench>/runs/bo-pip/.venv/lib/python3.13/site-packages/zc/buildout/easy_install.py:2107: UserWarning: Module zc was already imported from None, but <bench>/caches/bo-pip/eggs/v5/zc.recipe.egg-4.0.0-py3.13-macosx-26.6-arm64.egg is being added to sys.path
+[   17.68]   ws.add(dist)
+[   17.73] <bench>/runs/bo-pip/.venv/lib/python3.13/site-packages/zc/buildout/easy_install.py:2107: UserWarning: Module plone was already imported from None, but <bench>/caches/bo-pip/eggs/v5/plone.recipe.zope2instance-9.1.0-py3.13-macosx-26.6-arm64.egg is being added to sys.path
+[   17.73]   ws.add(dist)
+[   17.75] <bench>/runs/bo-pip/.venv/lib/python3.13/site-packages/zc/buildout/easy_install.py:2107: UserWarning: Module zc was already imported from None, but <bench>/caches/bo-pip/eggs/v5/zc.lockfile-4.0-py3.13-macosx-26.6-arm64.egg is being added to sys.path
+[   17.75]   ws.add(dist)
+[   17.93] <bench>/runs/bo-pip/.venv/lib/python3.13/site-packages/zc/buildout/easy_install.py:2107: UserWarning: Module zc was already imported from None, but <bench>/caches/bo-pip/eggs/v5/zc.recipe.testrunner-4.2.post1-py3.13-macosx-26.6-arm64.egg is being added to sys.path
+[   17.93]   ws.add(dist)
+[   19.00] Installing _mr.developer.
+[   19.05] Generated script '<bench>/runs/bo-pip/bin/develop'.
+[   19.05] Installing instance.
+[   19.54] Generated script '<bench>/runs/bo-pip/bin/instance'.
+[   19.54] Generated interpreter '<bench>/runs/bo-pip/parts/instance/bin/interpreter'.
+[   19.89] Generated script '<bench>/runs/bo-pip/bin/zodbverify'.
+[   19.89] Installing test.
+[   20.73] Generated script '<bench>/runs/bo-pip/bin/test'.
+[   20.73] Installing instance-cmfplone.
+[   21.05] Generated script '<bench>/runs/bo-pip/bin/instance-cmfplone'.
+[   21.05] Generated interpreter '<bench>/runs/bo-pip/parts/instance-cmfplone/bin/interpreter'.
+[   21.34] Installing robot.
+[   21.92] Generated script '<bench>/runs/bo-pip/bin/ride'.
+[   21.92] Generated script '<bench>/runs/bo-pip/bin/robot'.
+[   21.92] Generated script '<bench>/runs/bo-pip/bin/robot-debug'.
+[   21.92] Generated script '<bench>/runs/bo-pip/bin/robot-server'.
+[   21.93] Generated script '<bench>/runs/bo-pip/bin/rfbrowser'.
+[   21.93] Installing zopescripts.
+[   22.27] Generated script '<bench>/runs/bo-pip/bin/addzopeuser'.
+[   22.27] Generated script '<bench>/runs/bo-pip/bin/mkwsgiinstance'.
+[   22.27] Generated script '<bench>/runs/bo-pip/bin/runwsgi'.
+[   22.27] Generated script '<bench>/runs/bo-pip/bin/zconsole'.
+[   22.27] Generated script '<bench>/runs/bo-pip/bin/zodbverify'.
+[   22.28] Installing zopepy.
+[   22.83] Generated script '<bench>/runs/bo-pip/bin/plone-register-flags'.
+[   22.83] Generated script '<bench>/runs/bo-pip/bin/plone-register-icons'.
+[   22.83] Generated interpreter '<bench>/runs/bo-pip/bin/zopepy'.
+[   22.83] Installing packages.
+[   22.90] packages: (While processing egg Zope) Link already exists (<bench>/caches/bo-pip/eggs/v5/Zope-6.2-py3.13-macosx-26.6-arm64.egg/Products -> <bench>/runs/bo-pip/parts/packages/Products).  Skipping.
+[   22.94] packages: Warning: (While processing egg cffi) Package '_cffi_backend' not found.  Skipping.
+[   22.95] packages: Warning: (While processing egg charset-normalizer) Package 'ada92cb5d92a588d1b93__mypyc' not found.  Skipping.
+[   22.97] packages: (While processing egg zc-buildout) Link already exists (<bench>/runs/bo-pip/.venv/lib/python3.13/site-packages/zc -> <bench>/runs/bo-pip/parts/packages/zc).  Skipping.
+[   22.97] Installing releaser.
+[   23.05] Generated script '<bench>/runs/bo-pip/bin/manage'.
+[   23.05] Generated script '<bench>/runs/bo-pip/bin/addchangelogentry'.
+[   23.05] Generated script '<bench>/runs/bo-pip/bin/bumpversion'.
+[   23.05] Generated script '<bench>/runs/bo-pip/bin/fullrelease'.
+[   23.05] Generated script '<bench>/runs/bo-pip/bin/lasttagdiff'.
+[   23.05] Generated script '<bench>/runs/bo-pip/bin/lasttaglog'.
+[   23.05] Generated script '<bench>/runs/bo-pip/bin/longtest'.
+[   23.05] Generated script '<bench>/runs/bo-pip/bin/postrelease'.
+[   23.05] Generated script '<bench>/runs/bo-pip/bin/prerelease'.
+[   23.05] Generated script '<bench>/runs/bo-pip/bin/release'.
+[   23.05] Generated script '<bench>/runs/bo-pip/bin/pocompile'.
+[   23.05] Generated script '<bench>/runs/bo-pip/bin/pyroma'.
+[   23.05] Generated script '<bench>/runs/bo-pip/bin/pep440'.
+[   23.05] Generated script '<bench>/runs/bo-pip/bin/check-manifest'.
+[   23.06] Generated script '<bench>/runs/bo-pip/bin/twine'.
+[   23.06] Generated script '<bench>/runs/bo-pip/bin/pyproject-build'.
+[   23.06] Generated script '<bench>/runs/bo-pip/bin/docutils'.
+[   23.06] Generated script '<bench>/runs/bo-pip/bin/rst2html'.
+[   23.06] Generated script '<bench>/runs/bo-pip/bin/rst2html4'.
+[   23.06] Generated script '<bench>/runs/bo-pip/bin/rst2html5'.
+[   23.06] Generated script '<bench>/runs/bo-pip/bin/rst2latex'.
+[   23.06] Generated script '<bench>/runs/bo-pip/bin/rst2man'.
+[   23.06] Generated script '<bench>/runs/bo-pip/bin/rst2odt'.
+[   23.06] Generated script '<bench>/runs/bo-pip/bin/rst2pseudoxml'.
+[   23.06] Generated script '<bench>/runs/bo-pip/bin/rst2s5'.
+[   23.06] Generated script '<bench>/runs/bo-pip/bin/rst2xetex'.
+[   23.06] Generated script '<bench>/runs/bo-pip/bin/rst2xml'.
+[   23.06] Generated script '<bench>/runs/bo-pip/bin/trove-classifiers'.
+[   23.06] Generated script '<bench>/runs/bo-pip/bin/pygmentize'.
+[   23.06] Generated script '<bench>/runs/bo-pip/bin/keyring'.
+[   23.06] Generated script '<bench>/runs/bo-pip/bin/idna'.
+[   23.06] Generated script '<bench>/runs/bo-pip/bin/normalizer'.
+[   23.06] Generated script '<bench>/runs/bo-pip/bin/towncrier'.
+[   23.06] Generated script '<bench>/runs/bo-pip/bin/markdown-it'.
+[   23.06] Generated script '<bench>/runs/bo-pip/bin/cffi-gen-src'.
+[   23.06] Generated script '<bench>/runs/bo-pip/bin/pip'.
+[   23.06] Generated script '<bench>/runs/bo-pip/bin/pip3'.
+[   23.06] Generated script '<bench>/runs/bo-pip/bin/wheel'.
+[   23.06] Generated script '<bench>/runs/bo-pip/bin/buildout'.
+[   23.06] Installing z3c_checkversions.
+[   23.10] Generated script '<bench>/runs/bo-pip/bin/checkversions'.
+[   23.10] Installing ploneversioncheck.
+[   23.15] Generated script '<bench>/runs/bo-pip/bin/versioncheck'.
+[   23.15] Installing dependencies.
+[   23.20] Generated script '<bench>/runs/bo-pip/bin/dependencychecker'.
+[   23.20] Installing zodbupdate.
+[   23.56] Generated script '<bench>/runs/bo-pip/bin/zodbupdate'.
+[   23.56] Generated script '<bench>/runs/bo-pip/bin/zodbverify'.
+[   23.56] Installing vscode.
+# exit 0 after 18.37s

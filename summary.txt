@@ -1,0 +1,22 @@
+cold  bo-pip  n=2 fail=0 median=317.7s runs=[325.85, 309.55] dists=358 install=491MB cache=24MB
+      phases: {'bootstrap': 8.3, 'setup (ext, git, develop, recipes)': 81.6, 'parts': 227.9}
+cold  bo-uv   n=2 fail=0 median=75.0s runs=[72.36, 77.62] dists=358 install=419MB cache=425MB
+      phases: {'bootstrap': 8.3, 'setup (ext, git, develop, recipes)': 24.7, 'parts': 42.0}
+cold  mx      n=2 fail=0 median=51.5s runs=[52.17, 50.9] dists=349 install=372MB cache=424MB
+      phases: {'mxenv': 3.6, 'releaser + buildout2pip': 3.0, 'git sources': 7.3, 'mxfiles': 0.6, 'packages': 31.9, 'test, cookiecutter, instance': 5.2}
+warm  bo-pip  n=3 fail=0 median=303.4s runs=[313.35, 303.35, 299.21] dists=358 install=491MB cache=24MB
+      phases: {'bootstrap': 5.5, 'setup (ext, git, develop, recipes)': 79.3, 'parts': 218.5}
+warm  bo-uv   n=3 fail=0 median=46.0s runs=[46.04, 49.17, 43.77] dists=358 install=419MB cache=426MB
+      phases: {'bootstrap': 5.7, 'setup (ext, git, develop, recipes)': 17.5, 'parts': 23.0}
+warm  mx      n=3 fail=0 median=28.5s runs=[28.54, 30.17, 26.42] dists=349 install=372MB cache=425MB
+      phases: {'mxenv': 1.8, 'releaser + buildout2pip': 2.1, 'git sources': 6.3, 'mxfiles': 0.3, 'packages': 14.0, 'test, cookiecutter, instance': 3.8}
+shared bo-pip  n=3 fail=0 median=23.7s runs=[23.9, 23.67, 23.59] dists=358 install=491MB cache=452MB
+      phases: {'bootstrap': 5.5, 'setup (ext, git, develop, recipes)': 13.7, 'parts': 4.7}
+shared bo-uv   n=3 fail=0 median=22.5s runs=[22.5, 22.88, 22.31] dists=358 install=419MB cache=435MB
+      phases: {'bootstrap': 5.5, 'setup (ext, git, develop, recipes)': 12.1, 'parts': 4.7}
+noop  bo-pip  n=3 fail=0 median=10.4s runs=[10.6, 10.22, 10.42] dists=358 install=493MB cache=24MB
+      phases: {'setup (ext, git, develop, recipes)': 5.3, 'parts': 5.2}
+noop  bo-uv   n=3 fail=0 median=10.1s runs=[10.21, 10.11, 9.81] dists=358 install=421MB cache=426MB
+      phases: {'setup (ext, git, develop, recipes)': 5.2, 'parts': 4.9}
+noop  mx      n=3 fail=0 median=0.3s runs=[0.21, 0.27, 0.31] dists=349 install=372MB cache=425MB
+      phases: {'mxenv': 0.3}

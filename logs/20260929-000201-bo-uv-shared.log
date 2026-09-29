@@ -1,0 +1,834 @@
+
+$ <python3.13> -m venv .venv
+# exit 0 after 1.44s
+
+$ .venv/bin/pip install pip==26.2.1 setuptools==81.0.0 wheel==0.48.0 horse-with-no-namespace==20260202.0 zc.buildout==5.3.0a1 uv==0.12.19
+[    2.31] Collecting pip==26.2.1
+[    2.31]   Using cached pip-26.2.1-py3-none-any.whl.metadata (4.6 kB)
+[    2.43] Collecting setuptools==81.0.0
+[    2.43]   Using cached setuptools-81.0.0-py3-none-any.whl.metadata (6.6 kB)
+[    2.46] Collecting wheel==0.48.0
+[    2.47]   Using cached wheel-0.48.0-py3-none-any.whl.metadata (2.3 kB)
+[    2.49] Collecting horse-with-no-namespace==20260202.0
+[    2.50]   Using cached horse_with_no_namespace-20260202.0-py3-none-any.whl.metadata (4.6 kB)
+[    2.53] Collecting zc.buildout==5.3.0a1
+[    2.53]   Using cached zc_buildout-5.3.0a1-py3-none-any.whl.metadata (26 kB)
+[    2.71] Collecting uv==0.12.19
+[    2.71]   Using cached uv-0.12.19-py3-none-macosx_11_0_arm64.whl.metadata (11 kB)
+[    2.74] Collecting packaging>=24.0 (from wheel==0.48.0)
+[    2.74]   Using cached packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+[    2.77] Using cached pip-26.2.1-py3-none-any.whl (1.8 MB)
+[    2.81] Using cached setuptools-81.0.0-py3-none-any.whl (1.1 MB)
+[    2.84] Using cached wheel-0.48.0-py3-none-any.whl (33 kB)
+[    2.84] Using cached horse_with_no_namespace-20260202.0-py3-none-any.whl (6.2 kB)
+[    2.85] Using cached zc_buildout-5.3.0a1-py3-none-any.whl (418 kB)
+[    2.86] Using cached uv-0.12.19-py3-none-macosx_11_0_arm64.whl (17.1 MB)
+[    3.28] Using cached packaging-26.3-py3-none-any.whl (129 kB)
+[    3.31] Installing collected packages: uv, setuptools, pip, packaging, horse-with-no-namespace, wheel, zc.buildout
+[    4.77]   Attempting uninstall: pip
+[    4.77]     Found existing installation: pip 25.2
+[    4.79]     Uninstalling pip-25.2:
+[    4.80]       Successfully uninstalled pip-25.2
+[    5.53] 
+[    5.53] Successfully installed horse-with-no-namespace-20260202.0 packaging-26.3 pip-26.2.1 setuptools-81.0.0 uv-0.12.19 wheel-0.48.0 zc.buildout-5.3.0a1
+# exit 0 after 4.14s
+
+$ .venv/bin/buildout buildout:installer=uv buildout:eggs-directory=<bench>/caches/bo-uv/eggs versions:zc.buildout=5.3.0a1 versions:uv=0.12.19 versions:httpcore=1.0.9 versions:grpcio=1.81.0 versions:grpcio-tools=1.81.0 versions:protobuf=6.33.6
+[    6.01] <string>:1: UserWarning: 🐎 This Python ([1m<bench>/runs/bo-uv/.venv/bin/python3.13[0m) uses horse-with-no-namespace to make the following pkg_resources namespace packages compatible with PEP 420 namespace packages:
+[    6.01]   
+[    6.06] <bench>/runs/bo-uv/.venv/lib/python3.13/site-packages/horse_with_no_namespace/pkg_resources.py:54: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+[    6.06]   import pkg_resources
+[    6.66] optional-extends file not found: local.cfg
+[    6.66] With installer = uv, credentials in ~/.pypirc are not used; uv reads them from ~/.netrc instead.
+[    6.66] Creating directory '<bench>/caches/bo-uv/eggs/v5'.
+[    6.66] With installer = uv, the allow-hosts option is not enforced: uv has no host allow-list (its --allow-insecure-host flag is TLS policy, not filtering).
+[    6.66] Getting distribution for 'mr.developer==3.0.0'.
+[    6.66] Getting distribution for 'plone.versioncheck==2.0.1'.
+[    7.30] Got mr.developer 3.0.0.
+[    7.30] Got plone.versioncheck 2.0.1.
+[    7.30] Got anyio 4.14.2.
+[    7.30] Got certifi 2026.7.22.
+[    7.30] Got colorama 0.4.6.
+[    7.30] Got h11 0.16.0.
+[    7.30] Got httpcore 1.0.9.
+[    7.30] Got httpx 0.28.1.
+[    7.30] Got idna 3.18.
+[    7.30] Got Jinja2 3.1.6.
+[    7.30] Got MarkupSafe 3.0.3.
+[    7.55] mr.developer: Queued 'Plone' for checkout.
+[    7.81] mr.developer: Queued 'Products.CMFPlone' for checkout.
+[    7.97] mr.developer: Queued 'mockup' for checkout.
+[    9.37] mr.developer: Queued 'plone.app.locales' for checkout.
+[    9.43] mr.developer: Queued 'plone.app.upgrade' for checkout.
+[   10.37] mr.developer: Queued 'plone.restapi' for checkout.
+[   11.59] mr.developer: Updated 'plone.app.upgrade' with git.
+[   11.59] mr.developer: Switching to branch 'master'.
+[   11.59] mr.developer: Updated 'Plone' with git.
+[   11.59] mr.developer: Switching to branch '6.2.x'.
+[   12.07] mr.developer: Updated 'mockup' with git.
+[   12.07] mr.developer: Switching to branch '5.6.x'.
+[   12.13] mr.developer: Updated 'Products.CMFPlone' with git.
+[   12.13] mr.developer: Switching to branch '6.2.x'.
+[   12.15] mr.developer: Updated 'plone.app.locales' with git.
+[   12.15] mr.developer: Switching to branch 'master'.
+[   12.70] mr.developer: Updated 'plone.restapi' with git.
+[   12.70] mr.developer: Switching to branch 'main'.
+[   12.70] Creating directory '<bench>/runs/bo-uv/bin'.
+[   12.70] Creating directory '<bench>/runs/bo-uv/parts'.
+[   12.70] Creating directory '<bench>/runs/bo-uv/develop-eggs'.
+[   12.71] Develop: '<bench>/runs/bo-uv/src/Plone'
+[   13.49] Develop: '<bench>/runs/bo-uv/src/plone.app.locales'
+[   14.53] Develop: '<bench>/runs/bo-uv/src/plone.app.upgrade'
+[   15.16] Develop: '<bench>/runs/bo-uv/src/plone.restapi'
+[   15.96] Develop: '<bench>/runs/bo-uv/src/Products.CMFPlone'
+[   16.71] Getting distribution for 'zc.recipe.egg==4.0.0'.
+[   17.00] Got zc.recipe.egg 4.0.0.
+[   17.01] <bench>/runs/bo-uv/.venv/lib/python3.13/site-packages/zc/buildout/easy_install.py:1687: UserWarning: Module zc was already imported from None, but <bench>/caches/bo-uv/eggs/v5/zc.recipe.egg-4.0.0-py3.13-macosx-26.6-arm64.egg is being added to sys.path
+[   17.01]   ws.add(dist, replace=True)
+[   17.02] Getting distribution for 'plone.recipe.zope2instance==9.1.0'.
+[   19.36] Got plone.recipe.zope2instance 9.1.0.
+[   19.36] <bench>/runs/bo-uv/.venv/lib/python3.13/site-packages/zc/buildout/easy_install.py:1687: UserWarning: Module plone was already imported from None, but <bench>/caches/bo-uv/eggs/v5/plone.recipe.zope2instance-9.1.0-py3.13-macosx-26.6-arm64.egg is being added to sys.path
+[   19.36]   ws.add(dist, replace=True)
+[   19.36] Got AccessControl 7.4.
+[   19.36] Got Acquisition 6.2.
+[   19.36] Got AuthEncoding 6.0.
+[   19.36] Got beautifulsoup4 4.15.0.
+[   19.36] Got BTrees 6.4.
+[   19.36] Got cffi 2.1.1.
+[   19.36] Got Chameleon 4.6.0.
+[   19.36] Got DateTime 6.0.
+[   19.36] Got DocumentTemplate 5.3.
+[   19.36] Got ExtensionClass 6.3.
+[   19.36] Got legacy-cgi 2.6.4.
+[   19.36] Got MultiMapping 5.1.
+[   19.36] Got multipart 2.0.0.
+[   19.36] Got Paste 3.10.1.
+[   19.36] Got PasteDeploy 3.1.0.
+[   19.36] Got Persistence 5.4.
+[   19.36] Got persistent 6.7.
+[   19.36] Got pycparser 3.0.
+[   19.36] Got python-dotenv 1.2.3.
+[   19.36] Got python-gettext 5.0.
+[   19.36] Got pytz 2026.3.post1.
+[   19.36] Got RestrictedPython 8.5.
+[   19.36] Got roman 5.2.
+[   19.36] Got soupsieve 2.9.1.
+[   19.36] Got transaction 5.1.
+[   19.36] Got typing-extensions 4.16.0.
+[   19.36] Got waitress 3.0.2.
+[   19.36] Got WebOb 1.8.11.
+[   19.36] Got WebTest 3.0.7.
+[   19.36] Got WSGIProxy2 0.5.1.
+[   19.36] Got z3c.pt 5.1.
+[   19.36] Got zc.lockfile 4.0.
+[   19.36] <bench>/runs/bo-uv/.venv/lib/python3.13/site-packages/zc/buildout/easy_install.py:1687: UserWarning: Module zc was already imported from None, but <bench>/caches/bo-uv/eggs/v5/zc.lockfile-4.0-py3.13-macosx-26.6-arm64.egg is being added to sys.path
+[   19.36]   ws.add(dist, replace=True)
+[   19.36] Got ZConfig 4.3.
+[   19.36] Got zdaemon 5.2.1.
+[   19.36] Got ZEO 6.2.
+[   19.36] Got zExceptions 6.0.
+[   19.36] Got ZODB 6.3.
+[   19.36] Got zodbpickle 4.4.
+[   19.36] Got Zope 6.2.
+[   19.36] Got zope.annotation 6.0.
+[   19.36] Got zope.browser 4.0.
+[   19.36] Got zope.browsermenu 6.0.
+[   19.36] Got zope.browserpage 6.0.
+[   19.36] Got zope.browserresource 6.0.
+[   19.36] Got zope.cachedescriptors 6.0.
+[   19.36] Got zope.component 7.1.
+[   19.36] Got zope.configuration 7.1.
+[   19.36] Got zope.container 7.2.
+[   19.36] Got zope.contentprovider 7.0.
+[   19.36] Got zope.contenttype 6.0.
+[   19.36] Got zope.datetime 6.0.
+[   19.36] Got zope.deferredimport 6.1.1.
+[   19.36] Got zope.deprecation 6.0.
+[   19.36] Got zope.dottedname 7.1.
+[   19.36] Got zope.event 6.2.
+[   19.36] Got zope.exceptions 6.0.
+[   19.36] Got zope.filerepresentation 7.0.
+[   19.36] Got zope.globalrequest 3.0.
+[   19.36] Got zope.hookable 8.2.
+[   19.36] Got zope.i18n 6.0.
+[   19.36] Got zope.i18nmessageid 8.2.
+[   19.36] Got zope.interface 8.5.
+[   19.36] Got zope.lifecycleevent 6.0.
+[   19.36] Got zope.location 6.0.
+[   19.36] Got zope.pagetemplate 6.1.
+[   19.36] Got zope.processlifetime 4.0.
+[   19.36] Got zope.proxy 7.2.
+[   19.36] Got zope.ptresource 6.0.
+[   19.36] Got zope.publisher 8.1.
+[   19.36] Got zope.schema 8.1.
+[   19.36] Got zope.security 8.3.
+[   19.36] Got zope.sequencesort 6.0.
+[   19.36] Got zope.site 6.0.
+[   19.36] Got zope.size 6.0.
+[   19.36] Got zope.structuredtext 6.0.
+[   19.36] Got zope.tal 6.0.
+[   19.36] Got zope.tales 7.0.
+[   19.36] Got zope.testbrowser 8.0.
+[   19.36] Got zope.testing 6.2.
+[   19.36] Got zope.traversing 6.0.
+[   19.36] Got zope.viewlet 6.0.
+[   19.47] Getting distribution for 'zc.recipe.testrunner==4.2.post1'.
+[   19.84] Got zc.recipe.testrunner 4.2.post1.
+[   19.85] <bench>/runs/bo-uv/.venv/lib/python3.13/site-packages/zc/buildout/easy_install.py:1687: UserWarning: Module zc was already imported from None, but <bench>/caches/bo-uv/eggs/v5/zc.recipe.testrunner-4.2.post1-py3.13-macosx-26.6-arm64.egg is being added to sys.path
+[   19.85]   ws.add(dist, replace=True)
+[   19.85] Got zope.testrunner 8.3.
+[   19.88] Getting distribution for 'collective.recipe.omelette==3.0.0'.
+[   20.24] Got collective.recipe.omelette 3.0.0.
+[   20.27] Getting distribution for 'collective.recipe.vscode==0.1.9'.
+[   20.64] Got collective.recipe.vscode 0.1.9.
+[   21.33] Installing _mr.developer.
+[   21.35] Generated script '<bench>/runs/bo-uv/bin/develop'.
+[   21.35] Installing instance.
+[   21.46] Getting distribution for 'zodbverify==1.2.1'.
+[   21.46] Getting distribution for 'pdbpp==0.12.1'.
+[   21.46] Getting distribution for 'Products.CMFPlacefulWorkflow==4.0.0'.
+[   21.46] Getting distribution for 'plone.volto==6.0.1'.
+[   21.46] Getting distribution for 'plone.classicui==2.0.0'.
+[   21.46] Getting distribution for 'plone.app.multilingual==9.0.2'.
+[   21.46] Getting distribution for 'plone.app.iterate==7.0.0'.
+[   21.46] Getting distribution for 'plone.app.discussion==6.0.1'.
+[   21.46] Getting distribution for 'plone.app.caching==5.0.0'.
+[   21.46] Getting distribution for 'zope.ramcache==4.0'.
+[   21.46] Getting distribution for 'zope.intid==6.0'.
+[   21.46] Getting distribution for 'zope.app.locales==6.0'.
+[   21.46] Getting distribution for 'zc.relation==3.0'.
+[   21.46] Getting distribution for 'z3c.relationfield==3.1'.
+[   21.46] Getting distribution for 'z3c.form==6.1'.
+[   21.46] Getting distribution for 'z3c.caching==4.0'.
+[   21.46] Getting distribution for 'webresource==2.0.0'.
+[   21.46] Getting distribution for 'Products.ZCatalog==7.4'.
+[   21.46] Getting distribution for 'Products.statusmessages==6.0.0'.
+[   21.46] Getting distribution for 'Products.SiteErrorLog==7.0'.
+[   21.46] Getting distribution for 'Products.PortalTransforms==5.0.0'.
+[   21.46] Getting distribution for 'Products.PluggableAuthService==4.2.2'.
+[   21.46] Getting distribution for 'Products.PlonePAS==9.0.0'.
+[   21.46] Getting distribution for 'Products.MimetypesRegistry==4.0.0'.
+[   21.46] Getting distribution for 'Products.isurlinportal==4.0.0'.
+[   21.46] Getting distribution for 'Products.ExtendedPathIndex==6.0.0'.
+[   21.46] Getting distribution for 'Products.DCWorkflow==4.0'.
+[   21.46] Getting distribution for 'Products.CMFCore==3.8'.
+[   21.46] Getting distribution for 'Products.CMFEditions==5.0.0'.
+[   21.46] Getting distribution for 'plonetheme.barceloneta==4.1.1'.
+[   21.46] Getting distribution for 'plone.uuid==3.0.0'.
+[   21.46] Getting distribution for 'plone.theme==5.0.0'.
+[   21.46] Getting distribution for 'plone.subrequest==3.0.0'.
+[   21.46] Getting distribution for 'plone.staticresources==3.0.9'.
+[   21.46] Getting distribution for 'plone.session==5.1.0'.
+[   21.46] Getting distribution for 'plone.schema==3.0.0'.
+[   21.46] Getting distribution for 'plone.rfc822==4.0.0'.
+[   21.46] Getting distribution for 'plone.resource==4.0.0'.
+[   21.46] Getting distribution for 'plone.protect==6.0.0'.
+[   21.46] Getting distribution for 'plone.portlets==4.0.0'.
+[   21.46] Getting distribution for 'plone.portlet.static==5.0.0'.
+[   21.46] Getting distribution for 'plone.portlet.collection==5.0.1'.
+[   21.46] Getting distribution for 'plone.outputfilters==6.0.1'.
+[   21.46] Getting distribution for 'plone.namedfile==8.1.1'.
+[   21.46] Getting distribution for 'plone.memoize==4.0.0'.
+[   21.46] Getting distribution for 'plone.locking==4.0.0'.
+[   21.46] Getting distribution for 'plone.keyring==5.0.0'.
+[   21.46] Getting distribution for 'plone.intelligenttext==5.0.0'.
+[   21.46] Getting distribution for 'plone.indexer==3.0.0'.
+[   21.46] Getting distribution for 'plone.i18n==6.0.0'.
+[   21.46] Getting distribution for 'plone.formwidget.namedfile==4.0.0'.
+[   21.46] Getting distribution for 'plone.folder==5.0.0'.
+[   21.46] Getting distribution for 'plone.dexterity==4.0.0'.
+[   21.46] Getting distribution for 'plone.contentrules==4.0.0'.
+[   21.46] Getting distribution for 'plone.browserlayer==4.0.0'.
+[   21.46] Getting distribution for 'plone.base==4.0.2'.
+[   21.46] Getting distribution for 'plone.autoinclude==3.0.0'.
+[   21.46] Getting distribution for 'plone.autoform==3.0.1'.
+[   21.46] Getting distribution for 'plone.app.z3cform==5.0.2'.
+[   21.46] Getting distribution for 'plone.app.workflow==6.0.0'.
+[   21.46] Getting distribution for 'plone.app.vocabularies==7.0.0'.
+[   21.46] Getting distribution for 'plone.app.viewletmanager==5.0.0'.
+[   21.46] Getting distribution for 'plone.app.uuid==3.0.0'.
+[   21.46] Getting distribution for 'plone.app.users==4.0.0'.
+[   21.46] Getting distribution for 'plone.app.theming==7.0.1'.
+[   21.46] Getting distribution for 'plone.app.registry==3.0.1'.
+[   21.46] Getting distribution for 'plone.app.relationfield==5.0.0'.
+[   21.46] Getting distribution for 'plone.app.redirector==4.0.0'.
+[   21.46] Getting distribution for 'plone.app.portlets==7.0.2'.
+[   21.46] Getting distribution for 'plone.app.linkintegrity==5.0.0'.
+[   21.46] Getting distribution for 'plone.app.layout==6.0.2'.
+[   21.46] Getting distribution for 'plone.app.i18n==5.0.0'.
+[   21.46] Getting distribution for 'plone.app.dexterity==5.0.2'.
+[   21.46] Getting distribution for 'plone.app.customerize==3.0.1'.
+[   21.46] Getting distribution for 'plone.app.contenttypes==5.0.1'.
+[   21.46] Getting distribution for 'plone.app.contentrules==6.0.0'.
+[   21.46] Getting distribution for 'plone.app.contentmenu==4.0.0'.
+[   21.46] Getting distribution for 'plone.app.contentlisting==4.0.0'.
+[   21.46] Getting distribution for 'plone.app.content==5.0.0'.
+[   21.46] Getting distribution for 'lxml==6.1.3'.
+[   21.46] Getting distribution for 'five.intid==3.1.0'.
+[   21.46] Getting distribution for 'five.customerize==4.1'.
+[   21.46] Getting distribution for 'borg.localrole==5.0.1'.
+[   21.46] Getting distribution for 'PyJWT==2.13.0'.
+[   21.46] Getting distribution for 'plone.rest==6.0.0'.
+[   21.46] Getting distribution for 'plone.api==3.0.3'.
+[   21.46] Getting distribution for 'python-dateutil==2.9.0.post0'.
+[   21.46] Getting distribution for 'plone.registry==3.0.1'.
+[   21.46] Getting distribution for 'Products.GenericSetup==5.2'.
+[   30.84] Got zodbverify 1.2.1.
+[   30.84] Got pdbpp 0.12.1.
+[   30.84] Got Products.CMFPlacefulWorkflow 4.0.0.
+[   30.84] Got plone.volto 6.0.1.
+[   30.84] Got plone.classicui 2.0.0.
+[   30.84] Got plone.app.multilingual 9.0.2.
+[   30.84] Got plone.app.iterate 7.0.0.
+[   30.84] Got plone.app.discussion 6.0.1.
+[   30.84] Got plone.app.caching 5.0.0.
+[   30.84] Got zope.ramcache 4.0.
+[   30.84] Got zope.intid 6.0.
+[   30.84] Got zope.app.locales 6.0.
+[   30.84] Got zc.relation 3.0.
+[   30.84] Got z3c.relationfield 3.1.
+[   30.84] Got z3c.form 6.1.
+[   30.84] Got z3c.caching 4.0.
+[   30.84] Got webresource 2.0.0.
+[   30.84] Got Products.ZCatalog 7.4.
+[   30.84] Got Products.statusmessages 6.0.0.
+[   30.84] Got Products.SiteErrorLog 7.0.
+[   30.84] Got Products.PortalTransforms 5.0.0.
+[   30.84] Got Products.PluggableAuthService 4.2.2.
+[   30.84] Got Products.PlonePAS 9.0.0.
+[   30.84] Got Products.MimetypesRegistry 4.0.0.
+[   30.84] Got Products.isurlinportal 4.0.0.
+[   30.84] Got Products.ExtendedPathIndex 6.0.0.
+[   30.84] Got Products.DCWorkflow 4.0.
+[   30.84] Got Products.CMFCore 3.8.
+[   30.84] Got Products.CMFEditions 5.0.0.
+[   30.84] Got plonetheme.barceloneta 4.1.1.
+[   30.84] Got plone.uuid 3.0.0.
+[   30.84] Got plone.theme 5.0.0.
+[   30.84] Got plone.subrequest 3.0.0.
+[   30.84] Got plone.staticresources 3.0.9.
+[   30.84] Got plone.session 5.1.0.
+[   30.84] Got plone.schema 3.0.0.
+[   30.84] Got plone.rfc822 4.0.0.
+[   30.84] Got plone.resource 4.0.0.
+[   30.84] Got plone.protect 6.0.0.
+[   30.84] Got plone.portlets 4.0.0.
+[   30.84] Got plone.portlet.static 5.0.0.
+[   30.84] Got plone.portlet.collection 5.0.1.
+[   30.84] Got plone.outputfilters 6.0.1.
+[   30.84] Got plone.namedfile 8.1.1.
+[   30.84] Got plone.memoize 4.0.0.
+[   30.84] Got plone.locking 4.0.0.
+[   30.84] Got plone.keyring 5.0.0.
+[   30.84] Got plone.intelligenttext 5.0.0.
+[   30.84] Got plone.indexer 3.0.0.
+[   30.84] Got plone.i18n 6.0.0.
+[   30.84] Got plone.formwidget.namedfile 4.0.0.
+[   30.84] Got plone.folder 5.0.0.
+[   30.84] Got plone.dexterity 4.0.0.
+[   30.84] Got plone.contentrules 4.0.0.
+[   30.84] Got plone.browserlayer 4.0.0.
+[   30.84] Got plone.base 4.0.2.
+[   30.84] Got plone.autoinclude 3.0.0.
+[   30.84] Got plone.autoform 3.0.1.
+[   30.84] Got plone.app.z3cform 5.0.2.
+[   30.84] Got plone.app.workflow 6.0.0.
+[   30.84] Got plone.app.vocabularies 7.0.0.
+[   30.84] Got plone.app.viewletmanager 5.0.0.
+[   30.84] Got plone.app.uuid 3.0.0.
+[   30.84] Got plone.app.users 4.0.0.
+[   30.84] Got plone.app.theming 7.0.1.
+[   30.84] Got plone.app.registry 3.0.1.
+[   30.84] Got plone.app.relationfield 5.0.0.
+[   30.84] Got plone.app.redirector 4.0.0.
+[   30.84] Got plone.app.portlets 7.0.2.
+[   30.84] Got plone.app.linkintegrity 5.0.0.
+[   30.84] Got plone.app.layout 6.0.2.
+[   30.84] Got plone.app.i18n 5.0.0.
+[   30.84] Got plone.app.dexterity 5.0.2.
+[   30.84] Got plone.app.customerize 3.0.1.
+[   30.84] Got plone.app.contenttypes 5.0.1.
+[   30.84] Got plone.app.contentrules 6.0.0.
+[   30.84] Got plone.app.contentmenu 4.0.0.
+[   30.84] Got plone.app.contentlisting 4.0.0.
+[   30.84] Got plone.app.content 5.0.0.
+[   30.84] Got lxml 6.1.3.
+[   30.84] Got five.intid 3.1.0.
+[   30.84] Got five.customerize 4.1.
+[   30.84] Got borg.localrole 5.0.1.
+[   30.84] Got PyJWT 2.13.0.
+[   30.84] Got plone.rest 6.0.0.
+[   30.84] Got plone.api 3.0.3.
+[   30.84] Got python-dateutil 2.9.0.post0.
+[   30.84] Got plone.registry 3.0.1.
+[   30.84] Got Products.GenericSetup 5.2.
+[   30.84] Got attrs 26.1.0.
+[   30.84] Got charset-normalizer 3.4.9.
+[   30.84] Got collective.monkeypatcher 3.0.0.
+[   30.84] Got cssselect 1.5.0.
+[   30.84] Got decorator 5.3.1.
+[   30.84] Got diazo 2.0.6.
+[   30.84] Got docutils 0.22.4.
+[   30.84] Got fancycompleter 0.11.1.
+[   30.84] Got feedparser 6.0.14.
+[   30.84] Got feedparser-sgmllib 2.1.0.
+[   30.84] Got five.localsitemanager 5.0.
+[   30.84] Got icalendar 7.3.0.
+[   30.84] Got jsonschema 4.26.0.
+[   30.84] Got jsonschema-specifications 2025.9.1.
+[   30.84] Got lxml-html-clean 0.4.5.
+[   30.84] Got Markdown 3.10.3.
+[   30.84] Got Missing 5.2.
+[   30.84] Got piexif 1.1.3.
+[   30.84] Got pillow 12.3.0.
+[   30.84] Got plone.alterego 3.0.0.
+[   30.84] Got plone.app.event 6.0.1.
+[   30.84] Got plone.app.intid 3.0.0.
+[   30.84] Got plone.app.lockingbehavior 3.0.0.
+[   30.84] Got plone.app.querystring 3.0.0.
+[   30.84] Got plone.app.textfield 4.0.2.
+[   30.84] Got plone.app.versioningbehavior 3.0.0.
+[   30.84] Got plone.batching 3.0.1.
+[   30.84] Got plone.behavior 3.0.1.
+[   30.84] Got plone.cachepurging 4.0.0.
+[   30.84] Got plone.caching 3.0.0.
+[   30.84] Got plone.distribution 4.0.0.
+[   30.84] Got plone.event 3.0.0.
+[   30.84] Got plone.exportimport 2.1.0.
+[   30.84] Got plone.formwidget.recurrence 4.0.0.
+[   30.84] Got plone.resourceeditor 5.0.0.
+[   30.84] Got plone.scale 5.1.0.
+[   30.84] Got plone.schemaeditor 5.0.1.
+[   30.84] Got plone.stringinterp 3.0.0.
+[   30.84] Got plone.supermodel 3.0.0.
+[   30.84] Got plone.transformchain 4.0.0.
+[   30.84] Got plone.z3cform 3.0.0.
+[   30.84] Got Products.BTreeFolder2 6.0.
+[   30.84] Got Products.CMFDiffTool 5.0.0.
+[   30.84] Got Products.CMFDynamicViewFTI 8.0.0.
+[   30.84] Got Products.CMFUid 5.0.
+[   30.84] Got Products.DateRecurringIndex 4.0.0.
+[   30.84] Got Products.ExternalMethod 6.1.
+[   30.84] Got Products.MailHost 6.1.
+[   30.84] Got Products.PluginRegistry 3.1.
+[   30.84] Got Products.PythonScripts 5.3.1.
+[   30.84] Got Products.Sessions 6.2.
+[   30.84] Got Products.StandardCacheManagers 6.1.
+[   30.84] Got Products.ZopeVersionControl 5.1.
+[   30.84] Got Pygments 2.20.0.
+[   30.84] Got Record 4.2.
+[   30.84] Got referencing 0.37.0.
+[   30.84] Got repoze.xmliter 2.0.
+[   30.84] Got requests 2.34.2.
+[   30.84] Got rpds-py 2026.6.3.
+[   30.84] Got simplejson 4.1.2.
+[   30.84] Got six 1.17.0.
+[   30.84] Got tzdata 2026.3.
+[   30.84] Got Unidecode 1.4.0.
+[   30.84] Got urllib3 2.7.0.
+[   30.84] Got z3c.formwidget.query 3.0.
+[   30.84] Got z3c.objpath 3.0.
+[   30.84] Got z3c.unconfigure 3.0.
+[   30.84] Got z3c.zcmlhook 3.0.
+[   30.84] Got zope.componentvocabulary 4.0.
+[   30.84] Got zope.copy 6.0.
+[   30.84] Got zope.keyreference 7.0.
+[   30.84] Got zope.sendmail 7.2.
+[   31.09] Generated script '<bench>/runs/bo-uv/bin/instance'.
+[   31.09] Generated interpreter '<bench>/runs/bo-uv/parts/instance/bin/interpreter'.
+[   31.46] Generated script '<bench>/runs/bo-uv/bin/zodbverify'.
+[   31.46] Installing test.
+[   31.80] Getting distribution for 'plone.app.robotframework[test]==3.0.0'.
+[   31.80] Getting distribution for 'plone.app.testing[test]==8.0.2'.
+[   31.80] Getting distribution for 'plone.app.widgets[test]==6.0.0'.
+[   31.80] Getting distribution for 'plone.testing[test]==10.1.0'.
+[   31.80] Getting distribution for 'robotsuite==3.0.1'.
+[   31.80] Getting distribution for 'robotframework-debuglibrary==2.5.0'.
+[   31.80] Getting distribution for 'pytest-plone==1.1.0; extra == "test"'.
+[   31.80] Getting distribution for 'responses==0.26.3; extra == "test"'.
+[   31.80] Getting distribution for 'manuel==1.13.0; extra == "test"'.
+[   31.81] Getting distribution for 'robotsuite==3.0.1; extra == "test"'.
+[   31.81] Getting distribution for 'collective.MockMailHost==4.0.0'.
+[   31.81] Getting distribution for 'pytest-cov==7.1.0; extra == "test"'.
+[   31.81] Getting distribution for 'pytest==9.1.1; extra == "test"'.
+[   31.81] Getting distribution for 'zestreleaser.towncrier==2.0.1; extra == "test"'.
+[   31.81] Getting distribution for 'zest.releaser[recommended]==9.9.1; extra == "test"'.
+[   35.55] Got plone.app.robotframework 3.0.0.
+[   35.55] Got plone.app.testing 8.0.2.
+[   35.55] Got plone.app.widgets 6.0.0.
+[   35.55] Got plone.testing 10.1.0.
+[   35.55] Got robotsuite 3.0.1.
+[   35.55] Got robotframework-debuglibrary 2.5.0.
+[   35.55] Got pytest-plone 1.1.0.
+[   35.55] Got responses 0.26.3.
+[   35.55] Got manuel 1.13.0.
+[   35.55] Got collective.MockMailHost 4.0.0.
+[   35.55] Got pytest-cov 7.1.0.
+[   35.55] Got pytest 9.1.1.
+[   35.55] Got zestreleaser.towncrier 2.0.1.
+[   35.55] Got zest.releaser 9.9.1.
+[   35.55] Got babel 2.18.0.
+[   35.55] Got build 1.6.0.
+[   35.55] Got check-manifest 0.51.
+[   35.55] Got click 8.5.0.
+[   35.55] Got cmarkgfm 2025.10.22.
+[   35.56] Got coverage 7.16.0.
+[   35.56] Got furl 2.1.4.
+[   35.56] Got grpcio 1.81.0.
+[   35.56] Got grpcio-tools 1.81.0.
+[   35.56] Got id 1.6.1.
+[   35.56] Got importlib-metadata 9.0.1.
+[   35.56] Got iniconfig 2.3.0.
+[   35.56] Got jaraco.classes 3.4.0.
+[   35.56] Got jaraco.context 6.1.2.
+[   35.56] Got jaraco.functools 4.6.0.
+[   35.56] Got keyring 25.7.0.
+[   35.56] Got markdown-it-py 4.2.0.
+[   35.56] Got mdurl 0.1.2.
+[   35.56] Got mock 5.2.0.
+[   35.56] Got more-itertools 11.1.0.
+[   35.56] Got natsort 8.4.0.
+[   35.56] Got nh3 0.3.7.
+[   35.56] Got orderedmultidict 1.0.2.
+[   35.56] Got outcome 1.3.0.post0.
+[   35.56] Got overrides 7.7.0.
+[   35.56] Got pep440 0.1.2.
+[   35.56] Got pluggy 1.6.0.
+[   35.56] Got prompt-toolkit 3.0.53.
+[   35.56] Got protobuf 6.33.6.
+[   35.56] Got psutil 7.2.2.
+[   35.56] Got pyproject-hooks 1.2.0.
+[   35.56] Got pyroma 5.0.1.
+[   35.56] Got PySocks 1.7.1.
+[   35.56] Got PyYAML 6.0.3.
+[   35.56] Got readme-renderer 44.0.
+[   35.56] Got requests-toolbelt 1.0.0.
+[   35.56] Got rfc3986 2.0.0.
+[   35.56] Got rich 15.0.0.
+[   35.56] Got robotframework 7.3.2.
+[   35.56] Got robotframework-assertion-engine 5.0.1.
+[   35.56] Got robotframework-browser 20.0.0.
+[   35.56] Got robotframework-pythonlibcore 4.6.0.
+[   35.56] Got robotframework-selenium2library 3.0.0.
+[   35.56] Got robotframework-seleniumlibrary 6.9.0.
+[   35.56] Got robotframework-seleniumtestability 2.1.0.
+[   35.56] Got seedir 0.5.1.
+[   35.56] Got selenium 4.44.0.
+[   35.56] Got sniffio 1.3.1.
+[   35.56] Got sortedcontainers 2.4.0.
+[   35.56] Got towncrier 26.9.0.
+[   35.56] Got trio 0.34.0.
+[   35.56] Got trio-websocket 0.12.2.
+[   35.56] Got trove-classifiers 2026.6.1.19.
+[   35.56] Got twine 7.0.0.
+[   35.56] Got wcwidth 0.8.3.
+[   35.56] Got websocket-client 1.9.2.
+[   35.56] Got wrapt 2.4.0.
+[   35.56] Got wsproto 1.3.2.
+[   35.56] Got zipp 4.1.0.
+[   35.56] Got zope.pytestlayer 9.2.
+[   35.95] Generated script '<bench>/runs/bo-uv/bin/test'.
+[   35.95] Installing instance-cmfplone.
+[   36.27] Generated script '<bench>/runs/bo-uv/bin/instance-cmfplone'.
+[   36.28] Generated interpreter '<bench>/runs/bo-uv/parts/instance-cmfplone/bin/interpreter'.
+[   36.56] Installing robot.
+[   37.08] Getting distribution for 'robotframework-selenium2screenshots==0.8.1'.
+[   37.08] Getting distribution for 'watchdog==6.0.0; extra == "reload"'.
+[   37.71] Got robotframework-selenium2screenshots 0.8.1.
+[   37.71] Got watchdog 6.0.0.
+[   37.81] Generated script '<bench>/runs/bo-uv/bin/ride'.
+[   37.81] Generated script '<bench>/runs/bo-uv/bin/robot'.
+[   37.81] Generated script '<bench>/runs/bo-uv/bin/robot-debug'.
+[   37.81] Generated script '<bench>/runs/bo-uv/bin/robot-server'.
+[   37.82] Generated script '<bench>/runs/bo-uv/bin/rfbrowser'.
+[   37.82] Installing zopescripts.
+[   38.17] Generated script '<bench>/runs/bo-uv/bin/addzopeuser'.
+[   38.17] Generated script '<bench>/runs/bo-uv/bin/mkwsgiinstance'.
+[   38.17] Generated script '<bench>/runs/bo-uv/bin/runwsgi'.
+[   38.17] Generated script '<bench>/runs/bo-uv/bin/zconsole'.
+[   38.17] Generated script '<bench>/runs/bo-uv/bin/zodbverify'.
+[   38.17] Installing zopepy.
+[   38.71] Generated script '<bench>/runs/bo-uv/bin/plone-register-flags'.
+[   38.71] Generated script '<bench>/runs/bo-uv/bin/plone-register-icons'.
+[   38.71] Generated interpreter '<bench>/runs/bo-uv/bin/zopepy'.
+[   38.71] Installing packages.
+[   38.72] packages: (While processing egg five.customerize) Package 'five' is zipped.  Skipping.
+[   38.72] packages: (While processing egg plone.alterego) Package 'plone' is zipped.  Skipping.
+[   38.72] packages: (While processing egg plone.api) Package 'plone' is zipped.  Skipping.
+[   38.72] packages: (While processing egg plone.app.caching) Package 'plone/app' is zipped.  Skipping.
+[   38.72] packages: (While processing egg plone.app.caching) Package 'plone' is zipped.  Skipping.
+[   38.72] packages: (While processing egg plone.app.content) Package 'plone/app' is zipped.  Skipping.
+[   38.72] packages: (While processing egg plone.app.content) Package 'plone' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.contentlisting) Package 'plone/app' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.contentlisting) Package 'plone' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.contentmenu) Package 'plone/app' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.contentmenu) Package 'plone' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.contentrules) Package 'plone/app' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.contentrules) Package 'plone' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.contenttypes) Package 'plone/app' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.contenttypes) Package 'plone' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.customerize) Package 'plone/app' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.customerize) Package 'plone' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.dexterity) Package 'plone/app' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.dexterity) Package 'plone' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.discussion) Package 'plone/app' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.discussion) Package 'plone' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.event) Package 'plone/app' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.event) Package 'plone' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.i18n) Package 'plone/app' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.i18n) Package 'plone' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.intid) Package 'plone/app' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.intid) Package 'plone' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.iterate) Package 'plone/app' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.iterate) Package 'plone' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.layout) Package 'plone/app' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.layout) Package 'plone' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.linkintegrity) Package 'plone/app' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.linkintegrity) Package 'plone' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.lockingbehavior) Package 'plone/app' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.lockingbehavior) Package 'plone' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.multilingual) Package 'plone/app' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.multilingual) Package 'plone' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.portlets) Package 'plone/app' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.portlets) Package 'plone' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.querystring) Package 'plone/app' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.querystring) Package 'plone' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.redirector) Package 'plone/app' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.redirector) Package 'plone' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.registry) Package 'plone/app' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.registry) Package 'plone' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.relationfield) Package 'plone/app' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.relationfield) Package 'plone' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.testing) Package 'plone/app' is zipped.  Skipping.
+[   38.73] packages: (While processing egg plone.app.testing) Package 'plone' is zipped.  Skipping.
+[   38.74] packages: (While processing egg plone.app.textfield) Package 'plone/app' is zipped.  Skipping.
+[   38.74] packages: (While processing egg plone.app.textfield) Package 'plone' is zipped.  Skipping.
+[   38.74] packages: (While processing egg plone.app.theming) Package 'plone/app' is zipped.  Skipping.
+[   38.74] packages: (While processing egg plone.app.theming) Package 'plone' is zipped.  Skipping.
+[   38.74] packages: (While processing egg plone.app.users) Package 'plone/app' is zipped.  Skipping.
+[   38.74] packages: (While processing egg plone.app.users) Package 'plone' is zipped.  Skipping.
+[   38.74] packages: (While processing egg plone.app.uuid) Package 'plone/app' is zipped.  Skipping.
+[   38.74] packages: (While processing egg plone.app.uuid) Package 'plone' is zipped.  Skipping.
+[   38.74] packages: (While processing egg plone.app.versioningbehavior) Package 'plone/app' is zipped.  Skipping.
+[   38.74] packages: (While processing egg plone.app.versioningbehavior) Package 'plone' is zipped.  Skipping.
+[   38.74] packages: (While processing egg plone.app.viewletmanager) Package 'plone/app' is zipped.  Skipping.
+[   38.74] packages: (While processing egg plone.app.viewletmanager) Package 'plone' is zipped.  Skipping.
+[   38.74] packages: (While processing egg plone.app.vocabularies) Package 'plone/app' is zipped.  Skipping.
+[   38.74] packages: (While processing egg plone.app.vocabularies) Package 'plone' is zipped.  Skipping.
+[   38.74] packages: (While processing egg plone.app.widgets) Package 'plone/app' is zipped.  Skipping.
+[   38.74] packages: (While processing egg plone.app.widgets) Package 'plone' is zipped.  Skipping.
+[   38.74] packages: (While processing egg plone.app.workflow) Package 'plone/app' is zipped.  Skipping.
+[   38.74] packages: (While processing egg plone.app.workflow) Package 'plone' is zipped.  Skipping.
+[   38.74] packages: (While processing egg plone.app.z3cform) Package 'plone/app' is zipped.  Skipping.
+[   38.74] packages: (While processing egg plone.app.z3cform) Package 'plone' is zipped.  Skipping.
+[   38.74] packages: (While processing egg plone.autoform) Package 'plone' is zipped.  Skipping.
+[   38.74] packages: (While processing egg plone.batching) Package 'plone' is zipped.  Skipping.
+[   38.74] packages: (While processing egg plone.behavior) Package 'plone' is zipped.  Skipping.
+[   38.74] packages: (While processing egg plone.base) Package 'plone' is zipped.  Skipping.
+[   38.74] packages: (While processing egg plone.browserlayer) Package 'plone' is zipped.  Skipping.
+[   38.74] packages: (While processing egg plone.cachepurging) Package 'plone' is zipped.  Skipping.
+[   38.74] packages: (While processing egg plone.caching) Package 'plone' is zipped.  Skipping.
+[   38.74] packages: (While processing egg plone.classicui) Package 'plone' is zipped.  Skipping.
+[   38.74] packages: (While processing egg plone.contentrules) Package 'plone' is zipped.  Skipping.
+[   38.74] packages: (While processing egg plone.dexterity) Package 'plone' is zipped.  Skipping.
+[   38.74] packages: (While processing egg plone.distribution) Package 'plone' is zipped.  Skipping.
+[   38.74] packages: (While processing egg plone.event) Package 'plone' is zipped.  Skipping.
+[   38.74] packages: (While processing egg plone.exportimport) Package 'plone' is zipped.  Skipping.
+[   38.75] packages: (While processing egg plone.folder) Package 'plone' is zipped.  Skipping.
+[   38.75] packages: (While processing egg plone.formwidget.namedfile) Package 'plone/formwidget' is zipped.  Skipping.
+[   38.75] packages: (While processing egg plone.formwidget.namedfile) Package 'plone' is zipped.  Skipping.
+[   38.75] packages: (While processing egg plone.i18n) Package 'plone' is zipped.  Skipping.
+[   38.75] packages: (While processing egg plone.indexer) Package 'plone' is zipped.  Skipping.
+[   38.75] packages: (While processing egg plone.intelligenttext) Package 'plone' is zipped.  Skipping.
+[   38.75] packages: (While processing egg plone.keyring) Package 'plone' is zipped.  Skipping.
+[   38.75] packages: (While processing egg plone.locking) Package 'plone' is zipped.  Skipping.
+[   38.75] packages: (While processing egg plone.memoize) Package 'plone' is zipped.  Skipping.
+[   38.75] packages: (While processing egg plone.namedfile) Package 'plone' is zipped.  Skipping.
+[   38.75] packages: (While processing egg plone.outputfilters) Package 'plone' is zipped.  Skipping.
+[   38.75] packages: (While processing egg plone.portlet.collection) Package 'plone/portlet' is zipped.  Skipping.
+[   38.75] packages: (While processing egg plone.portlet.collection) Package 'plone' is zipped.  Skipping.
+[   38.75] packages: (While processing egg plone.portlet.static) Package 'plone/portlet' is zipped.  Skipping.
+[   38.75] packages: (While processing egg plone.portlet.static) Package 'plone' is zipped.  Skipping.
+[   38.75] packages: (While processing egg plone.portlets) Package 'plone' is zipped.  Skipping.
+[   38.75] packages: (While processing egg plone.protect) Package 'plone' is zipped.  Skipping.
+[   38.75] packages: (While processing egg plone.registry) Package 'plone' is zipped.  Skipping.
+[   38.75] packages: (While processing egg plone.resource) Package 'plone' is zipped.  Skipping.
+[   38.75] packages: (While processing egg plone.resourceeditor) Package 'plone' is zipped.  Skipping.
+[   38.75] packages: (While processing egg plone.rest) Package 'plone' is zipped.  Skipping.
+[   38.75] packages: (While processing egg plone.rfc822) Package 'plone' is zipped.  Skipping.
+[   38.75] packages: (While processing egg plone.scale) Package 'plone' is zipped.  Skipping.
+[   38.75] packages: (While processing egg plone.schema) Package 'plone' is zipped.  Skipping.
+[   38.75] packages: (While processing egg plone.schemaeditor) Package 'plone' is zipped.  Skipping.
+[   38.75] packages: (While processing egg plone.session) Package 'plone' is zipped.  Skipping.
+[   38.75] packages: (While processing egg plone.staticresources) Package 'plone' is zipped.  Skipping.
+[   38.75] packages: (While processing egg plone.stringinterp) Package 'plone' is zipped.  Skipping.
+[   38.76] packages: (While processing egg plone.subrequest) Package 'plone' is zipped.  Skipping.
+[   38.76] packages: (While processing egg plone.supermodel) Package 'plone' is zipped.  Skipping.
+[   38.76] packages: (While processing egg plone.testing) Package 'plone' is zipped.  Skipping.
+[   38.76] packages: (While processing egg plone.theme) Package 'plone' is zipped.  Skipping.
+[   38.76] packages: (While processing egg plone.transformchain) Package 'plone' is zipped.  Skipping.
+[   38.76] packages: (While processing egg plone.uuid) Package 'plone' is zipped.  Skipping.
+[   38.76] packages: (While processing egg plone.z3cform) Package 'plone' is zipped.  Skipping.
+[   38.76] packages: (While processing egg Products.CMFDiffTool) Package 'Products' is zipped.  Skipping.
+[   38.76] packages: (While processing egg Products.CMFDynamicViewFTI) Package 'Products' is zipped.  Skipping.
+[   38.76] packages: (While processing egg Products.CMFEditions) Package 'Products' is zipped.  Skipping.
+[   38.76] packages: (While processing egg Products.CMFUid) Package 'Products' is zipped.  Skipping.
+[   38.76] packages: (While processing egg Products.DateRecurringIndex) Package 'Products' is zipped.  Skipping.
+[   38.76] packages: (While processing egg Products.DCWorkflow) Package 'Products' is zipped.  Skipping.
+[   38.76] packages: (While processing egg Products.ExtendedPathIndex) Package 'Products' is zipped.  Skipping.
+[   38.77] packages: (While processing egg Products.GenericSetup) Package 'Products' is zipped.  Skipping.
+[   38.77] packages: (While processing egg Products.isurlinportal) Package 'Products' is zipped.  Skipping.
+[   38.77] packages: (While processing egg Products.MimetypesRegistry) Package 'Products' is zipped.  Skipping.
+[   38.77] packages: (While processing egg Products.PlonePAS) Package 'Products' is zipped.  Skipping.
+[   38.77] packages: (While processing egg Products.PluggableAuthService) Package 'Products' is zipped.  Skipping.
+[   38.77] packages: (While processing egg Products.PluginRegistry) Package 'Products' is zipped.  Skipping.
+[   38.77] packages: (While processing egg Products.PortalTransforms) Package 'Products' is zipped.  Skipping.
+[   38.77] packages: (While processing egg Products.statusmessages) Package 'Products' is zipped.  Skipping.
+[   38.77] packages: (While processing egg Products.ZopeVersionControl) Package 'Products' is zipped.  Skipping.
+[   38.77] packages: (While processing egg Zope) Link already exists (<bench>/caches/bo-uv/eggs/v5/Zope-6.2-py3.13-macosx-26.6-arm64.egg/Products -> <bench>/runs/bo-uv/parts/packages/Products).  Skipping.
+[   38.77] packages: (While processing egg zope.interface) Package 'zope' is zipped.  Skipping.
+[   38.77] packages: (While processing egg Products.CMFCore) Package 'Products' is zipped.  Skipping.
+[   38.77] packages: (While processing egg zope.structuredtext) Package 'zope' is zipped.  Skipping.
+[   38.78] packages: (While processing egg Products.StandardCacheManagers) Package 'Products' is zipped.  Skipping.
+[   38.78] packages: (While processing egg Products.Sessions) Package 'Products' is zipped.  Skipping.
+[   38.78] packages: (While processing egg Products.BTreeFolder2) Package 'Products' is zipped.  Skipping.
+[   38.78] packages: (While processing egg Products.ZCatalog) Package 'Products' is zipped.  Skipping.
+[   38.78] packages: (While processing egg Products.PythonScripts) Package 'Products' is zipped.  Skipping.
+[   38.78] packages: (While processing egg five.localsitemanager) Package 'five' is zipped.  Skipping.
+[   38.78] packages: (While processing egg Products.ExternalMethod) Package 'Products' is zipped.  Skipping.
+[   38.78] packages: (While processing egg zope.schema) Package 'zope' is zipped.  Skipping.
+[   38.78] packages: (While processing egg zope.globalrequest) Package 'zope' is zipped.  Skipping.
+[   38.78] packages: (While processing egg zope.intid) Package 'zope' is zipped.  Skipping.
+[   38.78] packages: (While processing egg zope.i18nmessageid) Package 'zope' is zipped.  Skipping.
+[   38.78] packages: (While processing egg zope.i18n) Package 'zope' is zipped.  Skipping.
+[   38.78] packages: (While processing egg zope.deprecation) Package 'zope' is zipped.  Skipping.
+[   38.79] packages: (While processing egg zope.deferredimport) Package 'zope' is zipped.  Skipping.
+[   38.79] packages: (While processing egg zope.cachedescriptors) Package 'zope' is zipped.  Skipping.
+[   38.79] packages: (While processing egg zope.app.locales) Package 'zope' is zipped.  Skipping.
+[   38.79] packages: (While processing egg z3c.form) Package 'z3c' is zipped.  Skipping.
+[   38.79] packages: (While processing egg z3c.caching) Package 'z3c' is zipped.  Skipping.
+[   38.79] packages: (While processing egg Products.SiteErrorLog) Package 'Products' is zipped.  Skipping.
+[   38.79] packages: (While processing egg plone.autoinclude) Package 'plone' is zipped.  Skipping.
+[   38.79] packages: (While processing egg zope.component) Package 'zope' is zipped.  Skipping.
+[   38.79] packages: (While processing egg zope.dottedname) Package 'zope' is zipped.  Skipping.
+[   38.79] packages: (While processing egg zope.copy) Package 'zope' is zipped.  Skipping.
+[   38.79] packages: (While processing egg zope.pagetemplate) Package 'zope' is zipped.  Skipping.
+[   38.79] packages: (While processing egg zope.browserpage) Package 'zope' is zipped.  Skipping.
+[   38.80] packages: (While processing egg zope.event) Package 'zope' is zipped.  Skipping.
+[   38.80] packages: (While processing egg zope.configuration) Package 'zope' is zipped.  Skipping.
+[   38.80] packages: (While processing egg zope.publisher) Package 'zope' is zipped.  Skipping.
+[   38.80] packages: (While processing egg zope.lifecycleevent) Package 'zope' is zipped.  Skipping.
+[   38.80] packages: (While processing egg zope.testbrowser) Package 'zope' is zipped.  Skipping.
+[   38.80] packages: (While processing egg zope.testing) Package 'zope' is zipped.  Skipping.
+[   38.80] packages: (While processing egg z3c.zcmlhook) Package 'z3c' is zipped.  Skipping.
+[   38.80] packages: (While processing egg zope.security) Package 'zope' is zipped.  Skipping.
+[   38.80] packages: (While processing egg zope.container) Package 'zope' is zipped.  Skipping.
+[   38.80] packages: (While processing egg zope.location) Package 'zope' is zipped.  Skipping.
+[   38.80] packages: (While processing egg zope.contentprovider) Package 'zope' is zipped.  Skipping.
+[   38.81] packages: (While processing egg z3c.unconfigure) Package 'z3c' is zipped.  Skipping.
+[   38.81] packages: (While processing egg zope.componentvocabulary) Package 'zope' is zipped.  Skipping.
+[   38.81] packages: (While processing egg zope.traversing) Package 'zope' is zipped.  Skipping.
+[   38.81] packages: (While processing egg z3c.formwidget.query) Package 'z3c' is zipped.  Skipping.
+[   38.81] packages: (While processing egg zope.viewlet) Package 'zope' is zipped.  Skipping.
+[   38.81] packages: (While processing egg Products.MailHost) Package 'Products' is zipped.  Skipping.
+[   38.81] packages: (While processing egg z3c.objpath) Package 'z3c' is zipped.  Skipping.
+[   38.81] packages: (While processing egg zope.browser) Package 'zope' is zipped.  Skipping.
+[   38.81] packages: (While processing egg zope.browsermenu) Package 'zope' is zipped.  Skipping.
+[   38.81] packages: (While processing egg zope.keyreference) Package 'zope' is zipped.  Skipping.
+[   38.81] packages: (While processing egg plone.formwidget.recurrence) Package 'plone/formwidget' is zipped.  Skipping.
+[   38.81] packages: (While processing egg plone.formwidget.recurrence) Package 'plone' is zipped.  Skipping.
+[   38.81] packages: (While processing egg zope.filerepresentation) Package 'zope' is zipped.  Skipping.
+[   38.81] packages: (While processing egg zope.tales) Package 'zope' is zipped.  Skipping.
+[   38.81] packages: (While processing egg zope.tal) Package 'zope' is zipped.  Skipping.
+[   38.82] packages: (While processing egg zope.size) Package 'zope' is zipped.  Skipping.
+[   38.82] packages: (While processing egg zope.site) Package 'zope' is zipped.  Skipping.
+[   38.82] packages: (While processing egg zope.sequencesort) Package 'zope' is zipped.  Skipping.
+[   38.82] packages: (While processing egg zope.ptresource) Package 'zope' is zipped.  Skipping.
+[   38.82] packages: (While processing egg zope.proxy) Package 'zope' is zipped.  Skipping.
+[   38.82] packages: (While processing egg zope.processlifetime) Package 'zope' is zipped.  Skipping.
+[   38.82] packages: (While processing egg zope.exceptions) Package 'zope' is zipped.  Skipping.
+[   38.82] packages: (While processing egg zope.datetime) Package 'zope' is zipped.  Skipping.
+[   38.82] packages: (While processing egg zope.contenttype) Package 'zope' is zipped.  Skipping.
+[   38.82] packages: (While processing egg zope.browserresource) Package 'zope' is zipped.  Skipping.
+[   38.82] packages: (While processing egg PasteDeploy) Package 'paste' is zipped.  Skipping.
+[   38.82] packages: Warning: (While processing egg cffi) Package '_cffi_backend' not found.  Skipping.
+[   38.83] packages: (While processing egg zope.hookable) Package 'zope' is zipped.  Skipping.
+[   38.83] packages: Warning: (While processing egg charset-normalizer) Package 'ada92cb5d92a588d1b93__mypyc' not found.  Skipping.
+[   38.83] packages: (While processing egg zope.sendmail) Package 'zope' is zipped.  Skipping.
+[   38.84] packages: (While processing egg jaraco.context) Package 'jaraco' is zipped.  Skipping.
+[   38.84] packages: (While processing egg jaraco.functools) Package 'jaraco' is zipped.  Skipping.
+[   38.84] packages: (While processing egg zc-buildout) Link already exists (<bench>/runs/bo-uv/.venv/lib/python3.13/site-packages/zc -> <bench>/runs/bo-uv/parts/packages/zc).  Skipping.
+[   38.84] Installing releaser.
+[   38.89] Getting distribution for 'plone.releaser==3.1.1'.
+[   38.89] Getting distribution for 'zest.pocompile==2.0.0'.
+[   39.54] Got plone.releaser 3.1.1.
+[   39.54] Got zest.pocompile 2.0.0.
+[   39.54] Got argh 0.31.3.
+[   39.54] Got configparser 7.2.0.
+[   39.54] Got gitdb 4.0.12.
+[   39.54] Got GitPython 3.1.61.
+[   39.54] Got progress 1.6.1.
+[   39.54] Got smmap 5.0.3.
+[   39.65] Generated script '<bench>/runs/bo-uv/bin/manage'.
+[   39.65] Generated script '<bench>/runs/bo-uv/bin/addchangelogentry'.
+[   39.65] Generated script '<bench>/runs/bo-uv/bin/bumpversion'.
+[   39.65] Generated script '<bench>/runs/bo-uv/bin/fullrelease'.
+[   39.65] Generated script '<bench>/runs/bo-uv/bin/lasttagdiff'.
+[   39.65] Generated script '<bench>/runs/bo-uv/bin/lasttaglog'.
+[   39.65] Generated script '<bench>/runs/bo-uv/bin/longtest'.
+[   39.65] Generated script '<bench>/runs/bo-uv/bin/postrelease'.
+[   39.65] Generated script '<bench>/runs/bo-uv/bin/prerelease'.
+[   39.65] Generated script '<bench>/runs/bo-uv/bin/release'.
+[   39.65] Generated script '<bench>/runs/bo-uv/bin/pocompile'.
+[   39.66] Generated script '<bench>/runs/bo-uv/bin/pyroma'.
+[   39.66] Generated script '<bench>/runs/bo-uv/bin/pep440'.
+[   39.66] Generated script '<bench>/runs/bo-uv/bin/check-manifest'.
+[   39.66] Generated script '<bench>/runs/bo-uv/bin/twine'.
+[   39.66] Generated script '<bench>/runs/bo-uv/bin/pyproject-build'.
+[   39.66] Generated script '<bench>/runs/bo-uv/bin/trove-classifiers'.
+[   39.66] Generated script '<bench>/runs/bo-uv/bin/pygmentize'.
+[   39.66] Generated script '<bench>/runs/bo-uv/bin/docutils'.
+[   39.66] Generated script '<bench>/runs/bo-uv/bin/rst2html'.
+[   39.66] Generated script '<bench>/runs/bo-uv/bin/rst2html4'.
+[   39.66] Generated script '<bench>/runs/bo-uv/bin/rst2html5'.
+[   39.66] Generated script '<bench>/runs/bo-uv/bin/rst2latex'.
+[   39.66] Generated script '<bench>/runs/bo-uv/bin/rst2man'.
+[   39.66] Generated script '<bench>/runs/bo-uv/bin/rst2odt'.
+[   39.66] Generated script '<bench>/runs/bo-uv/bin/rst2pseudoxml'.
+[   39.66] Generated script '<bench>/runs/bo-uv/bin/rst2s5'.
+[   39.66] Generated script '<bench>/runs/bo-uv/bin/rst2xetex'.
+[   39.66] Generated script '<bench>/runs/bo-uv/bin/rst2xml'.
+[   39.66] Generated script '<bench>/runs/bo-uv/bin/keyring'.
+[   39.66] Generated script '<bench>/runs/bo-uv/bin/idna'.
+[   39.66] Generated script '<bench>/runs/bo-uv/bin/normalizer'.
+[   39.66] Generated script '<bench>/runs/bo-uv/bin/markdown-it'.
+[   39.66] Generated script '<bench>/runs/bo-uv/bin/cffi-gen-src'.
+[   39.66] Generated script '<bench>/runs/bo-uv/bin/towncrier'.
+[   39.66] Generated script '<bench>/runs/bo-uv/bin/pip'.
+[   39.66] Generated script '<bench>/runs/bo-uv/bin/pip3'.
+[   39.66] Generated script '<bench>/runs/bo-uv/bin/wheel'.
+[   39.66] Generated script '<bench>/runs/bo-uv/bin/buildout'.
+[   39.66] Installing z3c_checkversions.
+[   39.70] Getting distribution for 'z3c.checkversions[buildout]==3.0'.
+[   40.36] Got z3c.checkversions 3.0.
+[   40.41] Generated script '<bench>/runs/bo-uv/bin/checkversions'.
+[   40.41] Installing ploneversioncheck.
+[   40.45] Generated script '<bench>/runs/bo-uv/bin/versioncheck'.
+[   40.45] Installing dependencies.
+[   40.48] Getting distribution for 'z3c.dependencychecker==3.0'.
+[   41.21] Got z3c.dependencychecker 3.0.
+[   41.21] Got cached-property 2.0.1.
+[   41.21] Got Deprecated 1.3.1.
+[   41.21] Got entry-points-txt 0.3.0.
+[   41.21] Got headerparser 0.5.2.
+[   41.21] Got toml 0.10.2.
+[   41.21] Got wheel-filename 2.1.0.
+[   41.21] Got wheel-inspect 1.8.0.
+[   41.27] Generated script '<bench>/runs/bo-uv/bin/dependencychecker'.
+[   41.27] Installing zodbupdate.
+[   41.60] Getting distribution for 'zodbupdate==3.0'.
+[   41.90] Got zodbupdate 3.0.
+[   41.96] Generated script '<bench>/runs/bo-uv/bin/zodbupdate'.
+[   41.96] Generated script '<bench>/runs/bo-uv/bin/zodbverify'.
+[   41.97] Installing vscode.
+# exit 0 after 36.49s

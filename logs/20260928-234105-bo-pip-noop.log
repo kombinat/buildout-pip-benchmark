@@ -1,0 +1,112 @@
+
+$ bin/buildout versions:zc.buildout=5.3.0a1 versions:uv=0.12.19 versions:httpcore=1.0.9 versions:grpcio=1.81.0 versions:grpcio-tools=1.81.0 versions:protobuf=6.33.6
+[    0.40] <string>:1: UserWarning: 🐎 This Python ([1m<bench>/runs/bo-pip/.venv/bin/python3.13[0m) uses horse-with-no-namespace to make the following pkg_resources namespace packages compatible with PEP 420 namespace packages:
+[    0.40]   
+[    0.56] <bench>/runs/bo-pip/.venv/lib/python3.13/site-packages/horse_with_no_namespace/pkg_resources.py:54: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+[    0.56]   import pkg_resources
+[    1.29] optional-extends file not found: local.cfg
+[    1.29] mr.developer: Queued 'Plone' for checkout.
+[    1.39] mr.developer: Queued 'Products.CMFPlone' for checkout.
+[    1.45] mr.developer: Queued 'mockup' for checkout.
+[    1.51] mr.developer: Queued 'plone.app.locales' for checkout.
+[    1.54] mr.developer: Queued 'plone.app.upgrade' for checkout.
+[    1.64] mr.developer: Queued 'plone.restapi' for checkout.
+[    2.59] mr.developer: Updated 'Plone' with git.
+[    2.59] mr.developer: Switching to branch '6.2.x'.
+[    2.70] mr.developer: Updated 'plone.app.upgrade' with git.
+[    2.70] mr.developer: Switching to branch 'master'.
+[    2.99] mr.developer: Updated 'mockup' with git.
+[    2.99] mr.developer: Switching to branch '5.6.x'.
+[    3.11] mr.developer: Updated 'plone.app.locales' with git.
+[    3.11] mr.developer: Switching to branch 'master'.
+[    3.17] mr.developer: Updated 'Products.CMFPlone' with git.
+[    3.17] mr.developer: Switching to branch '6.2.x'.
+[    3.49] mr.developer: Updated 'plone.restapi' with git.
+[    3.49] mr.developer: Switching to branch 'main'.
+[    3.79] Develop: '<bench>/runs/bo-pip/src/Plone'
+[    3.79] Develop: '<bench>/runs/bo-pip/src/plone.app.locales'
+[    3.79] Develop: '<bench>/runs/bo-pip/src/plone.app.upgrade'
+[    3.79] Develop: '<bench>/runs/bo-pip/src/plone.restapi'
+[    3.79] Develop: '<bench>/runs/bo-pip/src/Products.CMFPlone'
+[    3.82] <bench>/runs/bo-pip/.venv/lib/python3.13/site-packages/zc/buildout/easy_install.py:2107: UserWarning: Module zc was already imported from None, but <bench>/runs/bo-pip/eggs/v5/zc.recipe.egg-4.0.0-py3.13-macosx-26.6-arm64.egg is being added to sys.path
+[    3.82]   ws.add(dist)
+[    3.88] <bench>/runs/bo-pip/.venv/lib/python3.13/site-packages/zc/buildout/easy_install.py:2107: UserWarning: Module plone was already imported from None, but <bench>/runs/bo-pip/eggs/v5/plone.recipe.zope2instance-9.1.0-py3.13-macosx-26.6-arm64.egg is being added to sys.path
+[    3.88]   ws.add(dist)
+[    3.91] <bench>/runs/bo-pip/.venv/lib/python3.13/site-packages/zc/buildout/easy_install.py:2107: UserWarning: Module zc was already imported from None, but <bench>/runs/bo-pip/eggs/v5/zc.lockfile-4.0-py3.13-macosx-26.6-arm64.egg is being added to sys.path
+[    3.91]   ws.add(dist)
+[    4.11] <bench>/runs/bo-pip/.venv/lib/python3.13/site-packages/zc/buildout/easy_install.py:2107: UserWarning: Module zc was already imported from None, but <bench>/runs/bo-pip/eggs/v5/zc.recipe.testrunner-4.2.post1-py3.13-macosx-26.6-arm64.egg is being added to sys.path
+[    4.11]   ws.add(dist)
+[    4.94] Uninstalling instance-cmfplone.
+[    4.94] Uninstalling instance.
+[    4.94] Updating _mr.developer.
+[    4.99] Installing instance.
+[    5.53] Generated script '<bench>/runs/bo-pip/bin/instance'.
+[    5.53] Generated interpreter '<bench>/runs/bo-pip/parts/instance/bin/interpreter'.
+[    5.90] Generated script '<bench>/runs/bo-pip/bin/zodbverify'.
+[    5.90] Updating test.
+[    6.74] Generated script '<bench>/runs/bo-pip/bin/test'.
+[    6.74] Installing instance-cmfplone.
+[    7.06] Generated script '<bench>/runs/bo-pip/bin/instance-cmfplone'.
+[    7.06] Generated interpreter '<bench>/runs/bo-pip/parts/instance-cmfplone/bin/interpreter'.
+[    7.40] Updating robot.
+[    8.01] Generated script '<bench>/runs/bo-pip/bin/ride'.
+[    8.01] Generated script '<bench>/runs/bo-pip/bin/robot'.
+[    8.02] Generated script '<bench>/runs/bo-pip/bin/robot-debug'.
+[    8.02] Generated script '<bench>/runs/bo-pip/bin/robot-server'.
+[    8.02] Generated script '<bench>/runs/bo-pip/bin/rfbrowser'.
+[    8.02] Updating zopescripts.
+[    8.39] Generated script '<bench>/runs/bo-pip/bin/zodbverify'.
+[    8.39] Updating zopepy.
+[    8.97] Updating packages.
+[    9.05] packages: (While processing egg Zope) Link already exists (<bench>/runs/bo-pip/eggs/v5/Zope-6.2-py3.13-macosx-26.6-arm64.egg/Products -> <bench>/runs/bo-pip/parts/packages/Products).  Skipping.
+[    9.36] packages: Warning: (While processing egg cffi) Package '_cffi_backend' not found.  Skipping.
+[    9.37] packages: Warning: (While processing egg charset-normalizer) Package 'ada92cb5d92a588d1b93__mypyc' not found.  Skipping.
+[    9.38] packages: (While processing egg zc-buildout) Link already exists (<bench>/runs/bo-pip/.venv/lib/python3.13/site-packages/zc -> <bench>/runs/bo-pip/parts/packages/zc).  Skipping.
+[    9.38] Updating releaser.
+[    9.46] Generated script '<bench>/runs/bo-pip/bin/manage'.
+[    9.46] Generated script '<bench>/runs/bo-pip/bin/addchangelogentry'.
+[    9.46] Generated script '<bench>/runs/bo-pip/bin/bumpversion'.
+[    9.46] Generated script '<bench>/runs/bo-pip/bin/fullrelease'.
+[    9.46] Generated script '<bench>/runs/bo-pip/bin/lasttagdiff'.
+[    9.46] Generated script '<bench>/runs/bo-pip/bin/lasttaglog'.
+[    9.46] Generated script '<bench>/runs/bo-pip/bin/longtest'.
+[    9.46] Generated script '<bench>/runs/bo-pip/bin/postrelease'.
+[    9.46] Generated script '<bench>/runs/bo-pip/bin/prerelease'.
+[    9.47] Generated script '<bench>/runs/bo-pip/bin/release'.
+[    9.47] Generated script '<bench>/runs/bo-pip/bin/pocompile'.
+[    9.47] Generated script '<bench>/runs/bo-pip/bin/pyroma'.
+[    9.47] Generated script '<bench>/runs/bo-pip/bin/pep440'.
+[    9.47] Generated script '<bench>/runs/bo-pip/bin/check-manifest'.
+[    9.47] Generated script '<bench>/runs/bo-pip/bin/twine'.
+[    9.47] Generated script '<bench>/runs/bo-pip/bin/pyproject-build'.
+[    9.47] Generated script '<bench>/runs/bo-pip/bin/docutils'.
+[    9.47] Generated script '<bench>/runs/bo-pip/bin/rst2html'.
+[    9.47] Generated script '<bench>/runs/bo-pip/bin/rst2html4'.
+[    9.47] Generated script '<bench>/runs/bo-pip/bin/rst2html5'.
+[    9.48] Generated script '<bench>/runs/bo-pip/bin/rst2latex'.
+[    9.48] Generated script '<bench>/runs/bo-pip/bin/rst2man'.
+[    9.48] Generated script '<bench>/runs/bo-pip/bin/rst2odt'.
+[    9.48] Generated script '<bench>/runs/bo-pip/bin/rst2pseudoxml'.
+[    9.48] Generated script '<bench>/runs/bo-pip/bin/rst2s5'.
+[    9.49] Generated script '<bench>/runs/bo-pip/bin/rst2xetex'.
+[    9.49] Generated script '<bench>/runs/bo-pip/bin/rst2xml'.
+[    9.49] Generated script '<bench>/runs/bo-pip/bin/trove-classifiers'.
+[    9.49] Generated script '<bench>/runs/bo-pip/bin/pygmentize'.
+[    9.49] Generated script '<bench>/runs/bo-pip/bin/keyring'.
+[    9.49] Generated script '<bench>/runs/bo-pip/bin/idna'.
+[    9.49] Generated script '<bench>/runs/bo-pip/bin/normalizer'.
+[    9.49] Generated script '<bench>/runs/bo-pip/bin/towncrier'.
+[    9.49] Generated script '<bench>/runs/bo-pip/bin/markdown-it'.
+[    9.49] Generated script '<bench>/runs/bo-pip/bin/cffi-gen-src'.
+[    9.49] Generated script '<bench>/runs/bo-pip/bin/pip'.
+[    9.50] Generated script '<bench>/runs/bo-pip/bin/pip3'.
+[    9.50] Generated script '<bench>/runs/bo-pip/bin/wheel'.
+[    9.50] Generated script '<bench>/runs/bo-pip/bin/buildout'.
+[    9.50] Updating z3c_checkversions.
+[    9.56] Updating ploneversioncheck.
+[    9.64] Updating dependencies.
+[    9.71] Generated script '<bench>/runs/bo-pip/bin/dependencychecker'.
+[    9.71] Updating zodbupdate.
+[   10.07] Generated script '<bench>/runs/bo-pip/bin/zodbverify'.
+[   10.07] Updating vscode.
+# exit 0 after 10.22s

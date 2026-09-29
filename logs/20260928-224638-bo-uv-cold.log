@@ -1,0 +1,76 @@
+
+$ <python3.13> -m venv .venv
+# exit 0 after 3.56s
+
+$ .venv/bin/pip install pip==26.2.1 setuptools==81.0.0 wheel==0.48.0 horse-with-no-namespace==20260202.0 zc.buildout==5.3.0a1 uv==0.12.19
+[    4.57] Collecting pip==26.2.1
+[    4.75]   Downloading pip-26.2.1-py3-none-any.whl.metadata (4.6 kB)
+[    5.07] Collecting setuptools==81.0.0
+[    5.11]   Downloading setuptools-81.0.0-py3-none-any.whl.metadata (6.6 kB)
+[    5.19] Collecting wheel==0.48.0
+[    5.31]   Downloading wheel-0.48.0-py3-none-any.whl.metadata (2.3 kB)
+[    5.36] Collecting horse-with-no-namespace==20260202.0
+[    5.40]   Downloading horse_with_no_namespace-20260202.0-py3-none-any.whl.metadata (4.6 kB)
+[    5.59] Collecting zc.buildout==5.3.0a1
+[    5.80]   Downloading zc_buildout-5.3.0a1-py3-none-any.whl.metadata (26 kB)
+[    6.06] Collecting uv==0.12.19
+[    6.10]   Downloading uv-0.12.19-py3-none-macosx_11_0_arm64.whl.metadata (11 kB)
+[    6.18] Collecting packaging>=24.0 (from wheel==0.48.0)
+[    6.22]   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+[    6.36] Downloading pip-26.2.1-py3-none-any.whl (1.8 MB)
+[    6.59]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 10.2 MB/s  0:00:00
+[    6.63] Downloading setuptools-81.0.0-py3-none-any.whl (1.1 MB)
+[    6.81]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 4.8 MB/s  0:00:00
+[    6.88] Downloading wheel-0.48.0-py3-none-any.whl (33 kB)
+[    6.93] Downloading horse_with_no_namespace-20260202.0-py3-none-any.whl (6.2 kB)
+[    6.99] Downloading zc_buildout-5.3.0a1-py3-none-any.whl (418 kB)
+[    7.07] Downloading uv-0.12.19-py3-none-macosx_11_0_arm64.whl (17.1 MB)
+[    8.53]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 17.1/17.1 MB 11.6 MB/s  0:00:01
+[    8.57] Downloading packaging-26.3-py3-none-any.whl (129 kB)
+[    8.61] Installing collected packages: uv, setuptools, pip, packaging, horse-with-no-namespace, wheel, zc.buildout
+[   10.54]   Attempting uninstall: pip
+[   10.54]     Found existing installation: pip 25.2
+[   10.56]     Uninstalling pip-25.2:
+[   10.56]       Successfully uninstalled pip-25.2
+[   12.09] 
+[   12.09] Successfully installed horse-with-no-namespace-20260202.0 packaging-26.3 pip-26.2.1 setuptools-81.0.0 uv-0.12.19 wheel-0.48.0 zc.buildout-5.3.0a1
+# exit 0 after 8.57s
+
+$ .venv/bin/buildout buildout:installer=uv versions:zc.buildout=5.3.0a1 versions:uv=0.12.19
+[   12.65] <string>:1: UserWarning: 🐎 This Python ([1m<bench>/runs/bo-uv/.venv/bin/python3.13[0m) uses horse-with-no-namespace to make the following pkg_resources namespace packages compatible with PEP 420 namespace packages:
+[   12.65]   
+[   12.85] <bench>/runs/bo-uv/.venv/lib/python3.13/site-packages/horse_with_no_namespace/pkg_resources.py:54: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+[   12.85]   import pkg_resources
+[   13.95] optional-extends file not found: local.cfg
+[   13.95] With installer = uv, credentials in ~/.pypirc are not used; uv reads them from ~/.netrc instead.
+[   13.95] Creating directory '<bench>/runs/bo-uv/eggs/v5'.
+[   13.95] With installer = uv, the allow-hosts option is not enforced: uv has no host allow-list (its --allow-insecure-host flag is TLS policy, not filtering).
+[   13.95] Getting distribution for 'mr.developer==3.0.0'.
+[   13.95] Getting distribution for 'plone.versioncheck==2.0.1'.
+[   16.97] Got mr.developer 3.0.0.
+[   16.97] Got plone.versioncheck 2.0.1.
+[   16.97] Got anyio 4.14.2.
+[   16.97] Got certifi 2026.7.22.
+[   16.97] Got colorama 0.4.6.
+[   16.97] Got h11 0.16.0.
+[   16.97] Got httpcore 1.0.9.
+[   16.97] Got httpx 0.28.1.
+[   16.97] Got idna 3.18.
+[   16.97] Got Jinja2 3.1.6.
+[   16.97] Got MarkupSafe 3.0.3.
+[   16.99] While:
+[   16.99]   Installing.
+[   16.99]   Loading extensions.
+[   16.99]   Getting distribution for 'mr.developer==3.0.0'.
+[   16.99] Error: Picked: httpcore = 1.0.9
+[   16.99] 
+[   16.99] The `httpcore` egg does not have a version pin and `allow-picked-versions = false`.
+[   16.99] 
+[   16.99] To resolve this, add
+[   16.99] 
+[   16.99]     httpcore = 1.0.9
+[   16.99] 
+[   16.99] to the [versions] section,
+[   16.99] 
+[   16.99] OR set `allow-picked-versions = true`.
+# exit 1 after 4.88s

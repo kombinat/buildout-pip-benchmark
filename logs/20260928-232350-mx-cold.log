@@ -1,0 +1,511 @@
+
+$ make install PRIMARY_PYTHON=<python3.13>
+[    0.61] Using global uv for Python <python3.13>
+[    0.67] Setup Python Virtual Environment using global uv at '.venv'
+[    0.79] Using CPython 3.13.9 interpreter at: <python3.13>
+[    0.79] Creating virtual environment with seed packages at: .venv
+[    1.75]  + pip==26.2.1
+[    1.75] Activate with: source .venv/bin/activate
+[    2.20] Resolved 4 packages in 366ms
+[    2.56] Prepared 3 packages in 354ms
+[    2.65] Installed 3 packages in 94ms
+[    2.65]  + packaging==26.3
+[    2.65]  + setuptools==84.0.0
+[    2.65]  + wheel==0.48.0
+[    2.67] Install/Update MXStack Python packages
+[    3.30] Resolved 14 packages in 590ms
+[    3.56] Prepared 13 packages in 254ms
+[    3.61] Installed 13 packages in 52ms
+[    3.61]  + blessed==1.50.0
+[    3.61]  + editor==2.0.1
+[    3.61]  + inquirer==3.4.1
+[    3.61]  + jinja2==3.1.6
+[    3.61]  + jinxed==2.1.0
+[    3.61]  + markupsafe==3.0.3
+[    3.61]  + mxdev==5.4.1
+[    3.61]  + mxmake==2.2.0
+[    3.61]  + pyyaml==6.0.3
+[    3.61]  + readchar==4.2.2
+[    3.61]  + runs==1.3.0
+[    3.61]  + wcwidth==0.9.1
+[    3.61]  + xmod==1.10.0
+[    3.64] Install plone.releaser
+[    4.72] Resolved 45 packages in 1.06s
+[    4.84] Downloading pygments (1.2MiB)
+[    4.84] Downloading nh3 (1.4MiB)
+[    5.61]  Downloaded pygments
+[    5.61]  Downloaded nh3
+[    5.61] Prepared 40 packages in 884ms
+[    5.84] Installed 40 packages in 225ms
+[    5.84]  + argh==0.31.3
+[    5.84]  + build==1.6.1
+[    5.84]  + certifi==2026.7.22
+[    5.84]  + charset-normalizer==3.5.1
+[    5.84]  + check-manifest==0.51
+[    5.84]  + click==8.5.0
+[    5.84]  + colorama==0.4.6
+[    5.84]  + comrak==0.0.16
+[    5.84]  + configparser==7.2.0
+[    5.84]  + docutils==0.23
+[    5.84]  + gitdb==4.0.12
+[    5.84]  + gitpython==3.1.62
+[    5.84]  + id==1.6.1
+[    5.84]  + idna==3.20
+[    5.84]  + jaraco-classes==3.4.0
+[    5.84]  + jaraco-context==6.1.2
+[    5.84]  + jaraco-functools==4.6.0
+[    5.84]  + keyring==25.7.0
+[    5.84]  + markdown-it-py==4.2.0
+[    5.84]  + mdurl==0.1.2
+[    5.84]  + more-itertools==11.1.0
+[    5.84]  + nh3==0.3.7
+[    5.84]  + pep440==0.1.2
+[    5.84]  + plone-releaser==3.1.1
+[    5.84]  + progress==1.6.1
+[    5.84]  + pygments==2.21.0
+[    5.84]  + pyproject-hooks==1.3.3
+[    5.84]  + pyroma==5.0.1
+[    5.84]  + readme-renderer==46.0
+[    5.84]  + requests==2.34.2
+[    5.84]  + requests-toolbelt==1.0.0
+[    5.84]  + rfc3986==2.0.0
+[    5.84]  + rich==15.0.0
+[    5.84]  + smmap==5.0.3
+[    5.84]  + towncrier==26.9.0
+[    5.84]  + trove-classifiers==2026.9.21.13
+[    5.84]  + twine==7.0.0
+[    5.84]  + urllib3==2.8.0
+[    5.84]  + zest-releaser==9.9.1
+[    5.84]  + zestreleaser-towncrier==2.0.1
+[    5.86] Generate mx sources and checkouts from buildout
+[    6.59] Checkout project sources
+[    7.09] ###############################################################################
+[    7.46] mxmake: hook initialized
+[    7.46] # Load configuration
+[    7.47] Hook 'Hook' declares namespace='mxmake-' with a trailing '-'; this form is deprecated. Use namespace='mxmake' and the ':' section delimiter (e.g. [mxmake:section]).
+[    7.47] Hook section '[mxmake-env]' uses the deprecated '-' delimiter; rename to '[mxmake:env]'.
+[    7.47] Hook section '[mxmake-run-tests]' uses the deprecated '-' delimiter; rename to '[mxmake:run-tests]'.
+[    7.47] Hook section '[mxmake-plone-site]' uses the deprecated '-' delimiter; rename to '[mxmake:plone-site]'.
+[    7.47] ###############################################################################
+[    7.47] # Read infiles
+[    7.47] Read [r]: requirements-test.txt
+[    7.47] Read [c]: constraints-all.txt
+[    7.47] Read [c]: constraints.txt
+[    7.47] Read [c]: https://zopefoundation.github.io/Zope/releases/6.2/constraints.txt
+[    7.73] Read [c]: constraints-extra.txt
+[    7.73] Read [c]: constraints-ecosystem.txt
+[    7.73] ###############################################################################
+[    7.73] # Fetch sources from VCS
+[    7.79] Queued 'Plone' for checkout.
+[    8.08] Queued 'Products.CMFPlone' for checkout.
+[    8.49] Queued 'mockup' for checkout.
+[    9.85] Queued 'plone.app.locales' for checkout.
+[    9.91] Queued 'plone.app.upgrade' for checkout.
+[   10.86] Queued 'plone.restapi' for checkout.
+[   11.90] Updated 'Plone' with git.
+[   11.90] Switching to branch '6.2.x'.
+[   11.99] Updated 'mockup' with git.
+[   11.99] Switching to branch '5.6.x'.
+[   12.33] Updated 'plone.app.locales' with git.
+[   12.33] Switching to branch 'master'.
+[   12.82] Updated 'Products.CMFPlone' with git.
+[   12.82] Switching to branch '6.2.x'.
+[   12.99] Updated 'plone.app.upgrade' with git.
+[   12.99] Switching to branch 'master'.
+[   13.12] Updated 'plone.restapi' with git.
+[   13.12] Switching to branch 'main'.
+[   13.15] Create project files
+[   13.26] ###############################################################################
+[   13.30] mxmake: hook initialized
+[   13.30] # Load configuration
+[   13.31] Hook 'Hook' declares namespace='mxmake-' with a trailing '-'; this form is deprecated. Use namespace='mxmake' and the ':' section delimiter (e.g. [mxmake:section]).
+[   13.31] Hook section '[mxmake-env]' uses the deprecated '-' delimiter; rename to '[mxmake:env]'.
+[   13.31] Hook section '[mxmake-run-tests]' uses the deprecated '-' delimiter; rename to '[mxmake:run-tests]'.
+[   13.31] Hook section '[mxmake-plone-site]' uses the deprecated '-' delimiter; rename to '[mxmake:plone-site]'.
+[   13.31] ###############################################################################
+[   13.31] # Read infiles
+[   13.31] Read [r]: requirements-test.txt
+[   13.31] Read [c]: constraints-all.txt
+[   13.31] Read [c]: constraints.txt
+[   13.31] Read [c]: https://zopefoundation.github.io/Zope/releases/6.2/constraints.txt
+[   13.39] Read [c]: constraints-extra.txt
+[   13.39] Read [c]: constraints-ecosystem.txt
+[   13.39] ###############################################################################
+[   13.39] # Write outfiles
+[   13.39] Write [c]: constraints-mxdev.txt
+[   13.39] Write [r]: requirements-mxdev.txt
+[   13.40] 🎂 You are now ready for: pip install -r requirements-mxdev.txt
+[   13.40]    (path to pip may vary dependent on your installation method)
+[   13.45] Install python packages
+[   16.81] Resolved 326 packages in 3.33s
+[   16.86]    Building products-cmfplone @ file://<bench>/runs/mx/src/Products.CMFPlone
+[   16.86]    Building plone @ file://<bench>/runs/mx/src/Plone
+[   16.86]    Building plone-restapi @ file://<bench>/runs/mx/src/plone.restapi
+[   16.86]    Building plone-app-upgrade @ file://<bench>/runs/mx/src/plone.app.upgrade
+[   16.86]    Building plone-app-locales @ file://<bench>/runs/mx/src/plone.app.locales
+[   16.91] Downloading pygments (1.2MiB)
+[   16.92] Downloading plonetheme-barceloneta (5.9MiB)
+[   16.92] Downloading selenium (9.2MiB)
+[   16.92] Downloading babel (9.7MiB)
+[   16.92] Downloading plone-scale (2.6MiB)
+[   17.21] Downloading zope-app-locales (1.1MiB)
+[   17.21] Downloading grpcio-tools (5.5MiB)
+[   17.22] Downloading setuptools (1.0MiB)
+[   17.23] Downloading grpcio (11.5MiB)
+[   17.40] Downloading zope (3.0MiB)
+[   17.40] Downloading lxml (8.2MiB)
+[   17.40] Downloading plone-staticresources (9.6MiB)
+[   17.40] Downloading pillow (4.6MiB)
+[   22.59]       Built plone @ file://<bench>/runs/mx/src/Plone
+[   22.95]       Built products-cmfplone @ file://<bench>/runs/mx/src/Products.CMFPlone
+[   23.01]  Downloaded setuptools
+[   23.01]       Built plone-restapi @ file://<bench>/runs/mx/src/plone.restapi
+[   23.16]  Downloaded pygments
+[   23.16]  Downloaded zope-app-locales
+[   25.29]    Building manuel==1.13.0
+[   25.84]  Downloaded plone-scale
+[   26.90]  Downloaded zope
+[   28.21]  Downloaded pillow
+[   28.79]  Downloaded plonetheme-barceloneta
+[   30.53]  Downloaded grpcio-tools
+[   30.82]  Downloaded lxml
+[   31.01]  Downloaded selenium
+[   31.35]  Downloaded babel
+[   31.65]  Downloaded plone-staticresources
+[   32.09]  Downloaded grpcio
+[   32.22]       Built manuel==1.13.0
+[   32.38]       Built plone-app-upgrade @ file://<bench>/runs/mx/src/plone.app.upgrade
+[   32.63]       Built plone-app-locales @ file://<bench>/runs/mx/src/plone.app.locales
+[   32.63] Prepared 298 packages in 15.80s
+[   32.73] Uninstalled 11 packages in 99ms
+[   43.92] Installed 298 packages in 11.18s
+[   43.92]  + accesscontrol==7.4
+[   43.92]  + acquisition==6.2
+[   43.92]  + attrs==26.1.0
+[   43.92]  + authencoding==6.0
+[   43.92]  + babel==2.18.0
+[   43.92]  + beautifulsoup4==4.15.0
+[   43.92]  + borg-localrole==5.0.1
+[   43.92]  + btrees==6.4
+[   43.92]  - build==1.6.1
+[   43.92]  + build==1.6.0
+[   43.92]  + cffi==2.1.1
+[   43.92]  + chameleon==4.6.0
+[   43.92]  - charset-normalizer==3.5.1
+[   43.92]  + charset-normalizer==3.4.9
+[   43.92]  + cmarkgfm==2025.10.22
+[   43.92]  + collective-mockmailhost==4.0.0
+[   43.92]  + collective-monkeypatcher==3.0.0
+[   43.92]  + coverage==7.16.0
+[   43.92]  + cssselect==1.5.0
+[   43.92]  + datetime==6.0
+[   43.92]  + decorator==5.3.1
+[   43.92]  + diazo==2.0.6
+[   43.92]  + documenttemplate==5.3
+[   43.92]  - docutils==0.23
+[   43.92]  + docutils==0.22.4
+[   43.92]  + extensionclass==6.3
+[   43.92]  + feedparser==6.0.14
+[   43.92]  + feedparser-sgmllib==2.1.0
+[   43.92]  + five-customerize==4.1
+[   43.92]  + five-intid==3.1.0
+[   43.92]  + five-localsitemanager==5.0
+[   43.92]  + furl==2.1.4
+[   43.92]  + grpcio==1.81.0
+[   43.92]  + grpcio-tools==1.81.0
+[   43.92]  + h11==0.16.0
+[   43.92]  + horse-with-no-namespace==20260202.0
+[   43.92]  + icalendar==7.3.0
+[   43.92]  - idna==3.20
+[   43.92]  + idna==3.18
+[   43.92]  + importlib-metadata==9.0.1
+[   43.92]  + iniconfig==2.3.0
+[   43.92]  + jsonschema==4.26.0
+[   43.92]  + jsonschema-specifications==2025.9.1
+[   43.92]  + legacy-cgi==2.6.4
+[   43.92]  + lxml==6.1.3
+[   43.92]  + lxml-html-clean==0.4.5
+[   43.92]  + manuel==1.13.0
+[   43.92]  + markdown==3.10.3
+[   43.92]  + missing==5.2
+[   43.92]  + mock==5.2.0
+[   43.92]  + multimapping==5.1
+[   43.92]  + multipart==2.0.0
+[   43.92]  + natsort==8.4.0
+[   43.92]  + orderedmultidict==1.0.2
+[   43.92]  + outcome==1.3.0.post0
+[   43.92]  + overrides==7.7.0
+[   43.92]  + paste==3.10.1
+[   43.92]  + pastedeploy==3.1.0
+[   43.92]  + persistence==5.4
+[   43.92]  + persistent==6.7
+[   43.92]  + piexif==1.1.3
+[   43.92]  + pillow==12.3.0
+[   43.92]  + plone==6.2.3.dev0 (from file://<bench>/runs/mx/src/Plone)
+[   43.92]  + plone-alterego==3.0.0
+[   43.92]  + plone-api==3.0.3
+[   43.92]  + plone-app-caching==5.0.0
+[   43.92]  + plone-app-content==5.0.0
+[   43.92]  + plone-app-contentlisting==4.0.0
+[   43.92]  + plone-app-contentmenu==4.0.0
+[   43.92]  + plone-app-contentrules==6.0.0
+[   43.92]  + plone-app-contenttypes==5.0.1
+[   43.92]  + plone-app-customerize==3.0.1
+[   43.92]  + plone-app-dexterity==5.0.2
+[   43.92]  + plone-app-discussion==6.0.1
+[   43.92]  + plone-app-event==6.0.1
+[   43.92]  + plone-app-i18n==5.0.0
+[   43.92]  + plone-app-intid==3.0.0
+[   43.92]  + plone-app-iterate==7.0.0
+[   43.92]  + plone-app-layout==6.0.2
+[   43.92]  + plone-app-linkintegrity==5.0.0
+[   43.92]  + plone-app-locales==7.0.5.dev0 (from file://<bench>/runs/mx/src/plone.app.locales)
+[   43.92]  + plone-app-lockingbehavior==3.0.0
+[   43.92]  + plone-app-multilingual==9.0.2
+[   43.92]  + plone-app-portlets==7.0.2
+[   43.92]  + plone-app-querystring==3.0.0
+[   43.92]  + plone-app-redirector==4.0.0
+[   43.92]  + plone-app-registry==3.0.1
+[   43.92]  + plone-app-relationfield==5.0.0
+[   43.92]  + plone-app-robotframework==3.0.0
+[   43.92]  + plone-app-testing==8.0.2
+[   43.92]  + plone-app-textfield==4.0.2
+[   43.92]  + plone-app-theming==7.0.1
+[   43.92]  + plone-app-upgrade==4.1.2.dev0 (from file://<bench>/runs/mx/src/plone.app.upgrade)
+[   43.92]  + plone-app-users==4.0.0
+[   43.92]  + plone-app-uuid==3.0.0
+[   43.92]  + plone-app-versioningbehavior==3.0.0
+[   43.92]  + plone-app-viewletmanager==5.0.0
+[   43.92]  + plone-app-vocabularies==7.0.0
+[   43.92]  + plone-app-widgets==6.0.0
+[   43.92]  + plone-app-workflow==6.0.0
+[   43.92]  + plone-app-z3cform==5.0.2
+[   43.92]  + plone-autoform==3.0.1
+[   43.92]  + plone-autoinclude==3.0.0
+[   43.92]  + plone-base==4.0.2
+[   43.92]  + plone-batching==3.0.1
+[   43.92]  + plone-behavior==3.0.1
+[   43.92]  + plone-browserlayer==4.0.0
+[   43.92]  + plone-cachepurging==4.0.0
+[   43.92]  + plone-caching==3.0.0
+[   43.92]  + plone-classicui==2.0.0
+[   43.92]  + plone-contentrules==4.0.0
+[   43.92]  + plone-dexterity==4.0.0
+[   43.92]  + plone-distribution==4.0.0
+[   43.92]  + plone-event==3.0.0
+[   43.92]  + plone-exportimport==2.1.0
+[   43.92]  + plone-folder==5.0.0
+[   43.92]  + plone-formwidget-namedfile==4.0.0
+[   43.92]  + plone-formwidget-recurrence==4.0.0
+[   43.92]  + plone-i18n==6.0.0
+[   43.92]  + plone-indexer==3.0.0
+[   43.92]  + plone-intelligenttext==5.0.0
+[   43.92]  + plone-keyring==5.0.0
+[   43.92]  + plone-locking==4.0.0
+[   43.92]  + plone-memoize==4.0.0
+[   43.92]  + plone-namedfile==8.1.1
+[   43.92]  + plone-outputfilters==6.0.1
+[   43.92]  + plone-portlet-collection==5.0.1
+[   43.92]  + plone-portlet-static==5.0.0
+[   43.92]  + plone-portlets==4.0.0
+[   43.92]  + plone-protect==6.0.0
+[   43.92]  + plone-registry==3.0.1
+[   43.92]  + plone-resource==4.0.0
+[   43.92]  + plone-resourceeditor==5.0.0
+[   43.92]  + plone-rest==6.0.0
+[   43.92]  + plone-restapi==10.0.5.dev0 (from file://<bench>/runs/mx/src/plone.restapi)
+[   43.92]  + plone-rfc822==4.0.0
+[   43.92]  + plone-scale==5.1.0
+[   43.92]  + plone-schema==3.0.0
+[   43.92]  + plone-schemaeditor==5.0.1
+[   43.92]  + plone-session==5.1.0
+[   43.92]  + plone-staticresources==3.0.9
+[   43.92]  + plone-stringinterp==3.0.0
+[   43.92]  + plone-subrequest==3.0.0
+[   43.92]  + plone-supermodel==3.0.0
+[   43.92]  + plone-testing==10.1.0
+[   43.92]  + plone-theme==5.0.0
+[   43.92]  + plone-transformchain==4.0.0
+[   43.92]  + plone-uuid==3.0.0
+[   43.92]  + plone-volto==6.0.1
+[   43.92]  + plone-z3cform==3.0.0
+[   43.92]  + plonetheme-barceloneta==4.1.1
+[   43.92]  + pluggy==1.6.0
+[   43.92]  + products-btreefolder2==6.0
+[   43.92]  + products-cmfcore==3.8
+[   43.92]  + products-cmfdifftool==5.0.0
+[   43.92]  + products-cmfdynamicviewfti==8.0.0
+[   43.92]  + products-cmfeditions==5.0.0
+[   43.92]  + products-cmfplacefulworkflow==4.0.0
+[   43.92]  + products-cmfplone==6.2.3.dev0 (from file://<bench>/runs/mx/src/Products.CMFPlone)
+[   43.92]  + products-cmfuid==5.0
+[   43.92]  + products-daterecurringindex==4.0.0
+[   43.92]  + products-dcworkflow==4.0
+[   43.92]  + products-extendedpathindex==6.0.0
+[   43.92]  + products-externalmethod==6.1
+[   43.92]  + products-genericsetup==5.2
+[   43.92]  + products-isurlinportal==4.0.0
+[   43.92]  + products-mailhost==6.1
+[   43.92]  + products-mimetypesregistry==4.0.0
+[   43.92]  + products-plonepas==9.0.0
+[   43.92]  + products-pluggableauthservice==4.2.2
+[   43.92]  + products-pluginregistry==3.1
+[   43.92]  + products-portaltransforms==5.0.0
+[   43.92]  + products-pythonscripts==5.3.1
+[   43.92]  + products-sessions==6.2
+[   43.92]  + products-siteerrorlog==7.0
+[   43.92]  + products-standardcachemanagers==6.1
+[   43.92]  + products-statusmessages==6.0.0
+[   43.92]  + products-zcatalog==7.4
+[   43.92]  + products-zopeversioncontrol==5.1
+[   43.92]  + prompt-toolkit==3.0.53
+[   43.92]  + protobuf==6.33.6
+[   43.92]  + psutil==7.2.2
+[   43.92]  + pycparser==3.0
+[   43.92]  - pygments==2.21.0
+[   43.92]  + pygments==2.20.0
+[   43.92]  + pyjwt==2.13.0
+[   43.92]  - pyproject-hooks==1.3.3
+[   43.92]  + pyproject-hooks==1.2.0
+[   43.92]  + pysocks==1.7.1
+[   43.92]  + pytest==9.1.1
+[   43.92]  + pytest-cov==7.1.0
+[   43.92]  + pytest-plone==1.1.0
+[   43.92]  + python-dateutil==2.9.0.post0
+[   43.94]  + python-gettext==5.0
+[   43.94]  + pytz==2026.3.post1
+[   43.94]  - readme-renderer==46.0
+[   43.94]  + readme-renderer==44.0
+[   43.94]  + record==4.2
+[   43.94]  + referencing==0.37.0
+[   43.94]  + repoze-xmliter==2.0
+[   43.94]  + responses==0.26.3
+[   43.94]  + restrictedpython==8.5
+[   43.94]  + robotframework==7.3.2
+[   43.94]  + robotframework-assertion-engine==5.0.1
+[   43.94]  + robotframework-browser==20.0.0
+[   43.94]  + robotframework-debuglibrary==2.5.0
+[   43.94]  + robotframework-pythonlibcore==4.6.0
+[   43.94]  + robotframework-selenium2library==3.0.0
+[   43.94]  + robotframework-seleniumlibrary==6.9.0
+[   43.94]  + robotframework-seleniumtestability==2.1.0
+[   43.94]  + robotsuite==3.0.1
+[   43.94]  + roman==5.2
+[   43.94]  + rpds-py==2026.6.3
+[   43.94]  + seedir==0.5.1
+[   43.94]  + selenium==4.44.0
+[   43.94]  - setuptools==84.0.0
+[   43.94]  + setuptools==81.0.0
+[   43.94]  + simplejson==4.1.2
+[   43.94]  + six==1.17.0
+[   43.94]  + sniffio==1.3.1
+[   43.94]  + sortedcontainers==2.4.0
+[   43.94]  + soupsieve==2.9.1
+[   43.94]  + transaction==5.1
+[   43.94]  + trio==0.34.0
+[   43.94]  + trio-websocket==0.12.2
+[   43.94]  - trove-classifiers==2026.9.21.13
+[   43.94]  + trove-classifiers==2026.6.1.19
+[   43.94]  + typing-extensions==4.16.0
+[   43.94]  + tzdata==2026.3
+[   43.94]  + unidecode==1.4.0
+[   43.94]  - urllib3==2.8.0
+[   43.94]  + urllib3==2.7.0
+[   43.94]  + waitress==3.0.2
+[   43.94]  - wcwidth==0.9.1
+[   43.94]  + wcwidth==0.8.3
+[   43.94]  + webob==1.8.11
+[   43.94]  + webresource==2.0.0
+[   43.94]  + websocket-client==1.9.2
+[   43.94]  + webtest==3.0.7
+[   43.94]  + wrapt==2.4.0
+[   43.94]  + wsgiproxy2==0.5.1
+[   43.94]  + wsproto==1.3.2
+[   43.94]  + z3c-caching==4.0
+[   43.94]  + z3c-form==6.1
+[   43.94]  + z3c-formwidget-query==3.0
+[   43.94]  + z3c-objpath==3.0
+[   43.94]  + z3c-pt==5.1
+[   43.94]  + z3c-relationfield==3.1
+[   43.94]  + z3c-unconfigure==3.0
+[   43.94]  + z3c-zcmlhook==3.0
+[   43.94]  + zc-lockfile==4.0
+[   43.94]  + zc-relation==3.0
+[   43.94]  + zconfig==4.3
+[   43.94]  + zexceptions==6.0
+[   43.94]  + zipp==4.1.0
+[   43.94]  + zodb==6.3
+[   43.94]  + zodbpickle==4.4
+[   43.94]  + zope==6.2
+[   43.94]  + zope-annotation==6.0
+[   43.94]  + zope-app-locales==6.0
+[   43.94]  + zope-browser==4.0
+[   43.94]  + zope-browsermenu==6.0
+[   43.94]  + zope-browserpage==6.0
+[   43.94]  + zope-browserresource==6.0
+[   43.94]  + zope-cachedescriptors==6.0
+[   43.94]  + zope-component==7.1
+[   43.94]  + zope-componentvocabulary==4.0
+[   43.94]  + zope-configuration==7.1
+[   43.94]  + zope-container==7.2
+[   43.94]  + zope-contentprovider==7.0
+[   43.94]  + zope-contenttype==6.0
+[   43.94]  + zope-copy==6.0
+[   43.94]  + zope-datetime==6.0
+[   43.94]  + zope-deferredimport==6.1.1
+[   43.94]  + zope-deprecation==6.0
+[   43.94]  + zope-dottedname==7.1
+[   43.94]  + zope-event==6.2
+[   43.94]  + zope-exceptions==6.0
+[   43.94]  + zope-filerepresentation==7.0
+[   43.94]  + zope-globalrequest==3.0
+[   43.94]  + zope-hookable==8.2
+[   43.94]  + zope-i18n==6.0
+[   43.94]  + zope-i18nmessageid==8.2
+[   43.94]  + zope-interface==8.5
+[   43.94]  + zope-intid==6.0
+[   43.94]  + zope-keyreference==7.0
+[   43.94]  + zope-lifecycleevent==6.0
+[   43.94]  + zope-location==6.0
+[   43.94]  + zope-pagetemplate==6.1
+[   43.94]  + zope-processlifetime==4.0
+[   43.94]  + zope-proxy==7.2
+[   43.94]  + zope-ptresource==6.0
+[   43.94]  + zope-publisher==8.1
+[   43.94]  + zope-pytestlayer==9.2
+[   43.94]  + zope-ramcache==4.0
+[   43.94]  + zope-schema==8.1
+[   43.94]  + zope-security==8.3
+[   43.94]  + zope-sendmail==7.2
+[   43.94]  + zope-sequencesort==6.0
+[   43.94]  + zope-site==6.0
+[   43.94]  + zope-size==6.0
+[   43.94]  + zope-structuredtext==6.0
+[   43.94]  + zope-tal==6.0
+[   43.94]  + zope-tales==7.0
+[   43.94]  + zope-testbrowser==8.0
+[   43.94]  + zope-testing==6.2
+[   43.94]  + zope-testrunner==8.3
+[   43.94]  + zope-traversing==6.0
+[   43.94]  + zope-viewlet==6.0
+[   45.12] Install zope-testrunner
+[   45.15] Checked 1 package in 10ms
+[   45.17] Install cookiecutter
+[   45.65] Resolved 21 packages in 452ms
+[   45.78] Prepared 5 packages in 129ms
+[   45.85] Installed 5 packages in 68ms
+[   45.85]  + arrow==1.4.0
+[   45.85]  + binaryornot==0.6.0
+[   45.85]  + cookiecutter==2.7.1
+[   45.85]  + python-slugify==9.1.2
+[   45.85]  + text-unidecode==1.3
+[   45.87] Create Plone/Zope configuration from https://github.com/plone/cookiecutter-zope-instance to ./instance
+[   46.46] <string>:1: UserWarning: 🐎 This Python ([1m<bench>/runs/mx/.venv/bin/python[0m) uses horse-with-no-namespace to make the following pkg_resources namespace packages compatible with PEP 420 namespace packages:
+[   46.46]   paste
+[   50.17] <string>:1: UserWarning: 🐎 This Python ([1m<bench>/runs/mx/.venv/bin/python[0m) uses horse-with-no-namespace to make the following pkg_resources namespace packages compatible with PEP 420 namespace packages:
+[   50.17]   paste
+[   50.17] Warning: initial user's password is insecure, it should be at least 10 characters long!
+[   50.17] 
+[   50.39] <string>:1: UserWarning: 🐎 This Python ([1m<bench>/runs/mx/.venv/bin/python[0m) uses horse-with-no-namespace to make the following pkg_resources namespace packages compatible with PEP 420 namespace packages:
+[   50.39]   paste
+# exit 0 after 50.90s

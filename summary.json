@@ -1,0 +1,243 @@
+[
+ {
+  "scenario": "cold",
+  "method": "bo-pip",
+  "n": 2,
+  "failed": 0,
+  "median": 317.7,
+  "min": 309.55,
+  "max": 325.85,
+  "runs": [
+   325.85,
+   309.55
+  ],
+  "phases": {
+   "bootstrap": 8.3,
+   "setup (ext, git, develop, recipes)": 81.6,
+   "parts": 227.9
+  },
+  "ndists": 358,
+  "install_mb": 491,
+  "cache_mb": 24
+ },
+ {
+  "scenario": "cold",
+  "method": "bo-uv",
+  "n": 2,
+  "failed": 0,
+  "median": 75.0,
+  "min": 72.36,
+  "max": 77.62,
+  "runs": [
+   72.36,
+   77.62
+  ],
+  "phases": {
+   "bootstrap": 8.3,
+   "setup (ext, git, develop, recipes)": 24.7,
+   "parts": 42.0
+  },
+  "ndists": 358,
+  "install_mb": 419,
+  "cache_mb": 425
+ },
+ {
+  "scenario": "cold",
+  "method": "mx",
+  "n": 2,
+  "failed": 0,
+  "median": 51.5,
+  "min": 50.9,
+  "max": 52.17,
+  "runs": [
+   52.17,
+   50.9
+  ],
+  "phases": {
+   "mxenv": 3.6,
+   "releaser + buildout2pip": 3.0,
+   "git sources": 7.3,
+   "mxfiles": 0.6,
+   "packages": 31.9,
+   "test, cookiecutter, instance": 5.2
+  },
+  "ndists": 349,
+  "install_mb": 372,
+  "cache_mb": 424
+ },
+ {
+  "scenario": "warm",
+  "method": "bo-pip",
+  "n": 3,
+  "failed": 0,
+  "median": 303.4,
+  "min": 299.21,
+  "max": 313.35,
+  "runs": [
+   313.35,
+   303.35,
+   299.21
+  ],
+  "phases": {
+   "bootstrap": 5.5,
+   "setup (ext, git, develop, recipes)": 79.3,
+   "parts": 218.5
+  },
+  "ndists": 358,
+  "install_mb": 491,
+  "cache_mb": 24
+ },
+ {
+  "scenario": "warm",
+  "method": "bo-uv",
+  "n": 3,
+  "failed": 0,
+  "median": 46.0,
+  "min": 43.77,
+  "max": 49.17,
+  "runs": [
+   46.04,
+   49.17,
+   43.77
+  ],
+  "phases": {
+   "bootstrap": 5.7,
+   "setup (ext, git, develop, recipes)": 17.5,
+   "parts": 23.0
+  },
+  "ndists": 358,
+  "install_mb": 419,
+  "cache_mb": 426
+ },
+ {
+  "scenario": "warm",
+  "method": "mx",
+  "n": 3,
+  "failed": 0,
+  "median": 28.5,
+  "min": 26.42,
+  "max": 30.17,
+  "runs": [
+   28.54,
+   30.17,
+   26.42
+  ],
+  "phases": {
+   "mxenv": 1.8,
+   "releaser + buildout2pip": 2.1,
+   "git sources": 6.3,
+   "mxfiles": 0.3,
+   "packages": 14.0,
+   "test, cookiecutter, instance": 3.8
+  },
+  "ndists": 349,
+  "install_mb": 372,
+  "cache_mb": 425
+ },
+ {
+  "scenario": "shared",
+  "method": "bo-pip",
+  "n": 3,
+  "failed": 0,
+  "median": 23.7,
+  "min": 23.59,
+  "max": 23.9,
+  "runs": [
+   23.9,
+   23.67,
+   23.59
+  ],
+  "phases": {
+   "bootstrap": 5.5,
+   "setup (ext, git, develop, recipes)": 13.7,
+   "parts": 4.7
+  },
+  "ndists": 358,
+  "install_mb": 491,
+  "cache_mb": 452
+ },
+ {
+  "scenario": "shared",
+  "method": "bo-uv",
+  "n": 3,
+  "failed": 0,
+  "median": 22.5,
+  "min": 22.31,
+  "max": 22.88,
+  "runs": [
+   22.5,
+   22.88,
+   22.31
+  ],
+  "phases": {
+   "bootstrap": 5.5,
+   "setup (ext, git, develop, recipes)": 12.1,
+   "parts": 4.7
+  },
+  "ndists": 358,
+  "install_mb": 419,
+  "cache_mb": 435
+ },
+ {
+  "scenario": "noop",
+  "method": "bo-pip",
+  "n": 3,
+  "failed": 0,
+  "median": 10.4,
+  "min": 10.22,
+  "max": 10.6,
+  "runs": [
+   10.6,
+   10.22,
+   10.42
+  ],
+  "phases": {
+   "setup (ext, git, develop, recipes)": 5.3,
+   "parts": 5.2
+  },
+  "ndists": 358,
+  "install_mb": 493,
+  "cache_mb": 24
+ },
+ {
+  "scenario": "noop",
+  "method": "bo-uv",
+  "n": 3,
+  "failed": 0,
+  "median": 10.1,
+  "min": 9.81,
+  "max": 10.21,
+  "runs": [
+   10.21,
+   10.11,
+   9.81
+  ],
+  "phases": {
+   "setup (ext, git, develop, recipes)": 5.2,
+   "parts": 4.9
+  },
+  "ndists": 358,
+  "install_mb": 421,
+  "cache_mb": 426
+ },
+ {
+  "scenario": "noop",
+  "method": "mx",
+  "n": 3,
+  "failed": 0,
+  "median": 0.3,
+  "min": 0.21,
+  "max": 0.31,
+  "runs": [
+   0.21,
+   0.27,
+   0.31
+  ],
+  "phases": {
+   "mxenv": 0.3
+  },
+  "ndists": 349,
+  "install_mb": 372,
+  "cache_mb": 425
+ }
+]

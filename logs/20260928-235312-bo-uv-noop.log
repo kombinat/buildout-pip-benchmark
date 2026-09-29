@@ -1,0 +1,317 @@
+
+$ bin/buildout buildout:installer=uv versions:zc.buildout=5.3.0a1 versions:uv=0.12.19 versions:httpcore=1.0.9 versions:grpcio=1.81.0 versions:grpcio-tools=1.81.0 versions:protobuf=6.33.6
+[    0.44] <string>:1: UserWarning: 🐎 This Python ([1m<bench>/runs/bo-uv/.venv/bin/python3.13[0m) uses horse-with-no-namespace to make the following pkg_resources namespace packages compatible with PEP 420 namespace packages:
+[    0.44]   
+[    0.61] <bench>/runs/bo-uv/.venv/lib/python3.13/site-packages/horse_with_no_namespace/pkg_resources.py:54: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+[    0.61]   import pkg_resources
+[    1.31] optional-extends file not found: local.cfg
+[    1.31] With installer = uv, credentials in ~/.pypirc are not used; uv reads them from ~/.netrc instead.
+[    1.31] With installer = uv, the allow-hosts option is not enforced: uv has no host allow-list (its --allow-insecure-host flag is TLS policy, not filtering).
+[    1.46] mr.developer: Queued 'Plone' for checkout.
+[    1.53] mr.developer: Queued 'Products.CMFPlone' for checkout.
+[    1.64] mr.developer: Queued 'mockup' for checkout.
+[    1.69] mr.developer: Queued 'plone.app.locales' for checkout.
+[    1.73] mr.developer: Queued 'plone.app.upgrade' for checkout.
+[    1.78] mr.developer: Queued 'plone.restapi' for checkout.
+[    2.73] mr.developer: Updated 'plone.app.upgrade' with git.
+[    2.73] mr.developer: Switching to branch 'master'.
+[    2.73] mr.developer: Updated 'Plone' with git.
+[    2.73] mr.developer: Switching to branch '6.2.x'.
+[    3.12] mr.developer: Updated 'mockup' with git.
+[    3.12] mr.developer: Switching to branch '5.6.x'.
+[    3.21] mr.developer: Updated 'plone.app.locales' with git.
+[    3.21] mr.developer: Switching to branch 'master'.
+[    3.23] mr.developer: Updated 'Products.CMFPlone' with git.
+[    3.23] mr.developer: Switching to branch '6.2.x'.
+[    3.74] mr.developer: Updated 'plone.restapi' with git.
+[    3.74] mr.developer: Switching to branch 'main'.
+[    4.07] Develop: '<bench>/runs/bo-uv/src/Plone'
+[    4.07] Develop: '<bench>/runs/bo-uv/src/plone.app.locales'
+[    4.07] Develop: '<bench>/runs/bo-uv/src/plone.app.upgrade'
+[    4.07] Develop: '<bench>/runs/bo-uv/src/plone.restapi'
+[    4.07] Develop: '<bench>/runs/bo-uv/src/Products.CMFPlone'
+[    4.11] <bench>/runs/bo-uv/.venv/lib/python3.13/site-packages/zc/buildout/easy_install.py:1927: UserWarning: Module zc was already imported from None, but <bench>/runs/bo-uv/eggs/v5/zc.recipe.egg-4.0.0-py3.13-macosx-26.6-arm64.egg is being added to sys.path
+[    4.11]   ws.add(dist)
+[    4.15] <bench>/runs/bo-uv/.venv/lib/python3.13/site-packages/zc/buildout/easy_install.py:1927: UserWarning: Module plone was already imported from None, but <bench>/runs/bo-uv/eggs/v5/plone.recipe.zope2instance-9.1.0-py3.13-macosx-26.6-arm64.egg is being added to sys.path
+[    4.15]   ws.add(dist)
+[    4.17] <bench>/runs/bo-uv/.venv/lib/python3.13/site-packages/zc/buildout/easy_install.py:1887: UserWarning: Module zc was already imported from None, but <bench>/runs/bo-uv/eggs/v5/zc.lockfile-4.0-py3.13-macosx-26.6-arm64.egg is being added to sys.path
+[    4.17]   ws.add(dist)
+[    4.32] <bench>/runs/bo-uv/.venv/lib/python3.13/site-packages/zc/buildout/easy_install.py:1927: UserWarning: Module zc was already imported from None, but <bench>/runs/bo-uv/eggs/v5/zc.recipe.testrunner-4.2.post1-py3.13-macosx-26.6-arm64.egg is being added to sys.path
+[    4.32]   ws.add(dist)
+[    5.17] Uninstalling instance-cmfplone.
+[    5.17] Uninstalling instance.
+[    5.17] Updating _mr.developer.
+[    5.22] Installing instance.
+[    5.59] Generated script '<bench>/runs/bo-uv/bin/instance'.
+[    5.59] Generated interpreter '<bench>/runs/bo-uv/parts/instance/bin/interpreter'.
+[    5.95] Generated script '<bench>/runs/bo-uv/bin/zodbverify'.
+[    5.96] Updating test.
+[    6.82] Generated script '<bench>/runs/bo-uv/bin/test'.
+[    6.82] Installing instance-cmfplone.
+[    7.14] Generated script '<bench>/runs/bo-uv/bin/instance-cmfplone'.
+[    7.14] Generated interpreter '<bench>/runs/bo-uv/parts/instance-cmfplone/bin/interpreter'.
+[    7.44] Updating robot.
+[    8.03] Generated script '<bench>/runs/bo-uv/bin/ride'.
+[    8.03] Generated script '<bench>/runs/bo-uv/bin/robot'.
+[    8.04] Generated script '<bench>/runs/bo-uv/bin/robot-debug'.
+[    8.05] Generated script '<bench>/runs/bo-uv/bin/robot-server'.
+[    8.05] Generated script '<bench>/runs/bo-uv/bin/rfbrowser'.
+[    8.05] Updating zopescripts.
+[    8.40] Generated script '<bench>/runs/bo-uv/bin/zodbverify'.
+[    8.40] Updating zopepy.
+[    8.95] Updating packages.
+[    8.97] packages: (While processing egg five.customerize) Package 'five' is zipped.  Skipping.
+[    8.97] packages: (While processing egg plone.alterego) Package 'plone' is zipped.  Skipping.
+[    8.97] packages: (While processing egg plone.api) Package 'plone' is zipped.  Skipping.
+[    8.97] packages: (While processing egg plone.app.caching) Package 'plone/app' is zipped.  Skipping.
+[    8.97] packages: (While processing egg plone.app.caching) Package 'plone' is zipped.  Skipping.
+[    8.97] packages: (While processing egg plone.app.content) Package 'plone/app' is zipped.  Skipping.
+[    8.97] packages: (While processing egg plone.app.content) Package 'plone' is zipped.  Skipping.
+[    8.97] packages: (While processing egg plone.app.contentlisting) Package 'plone/app' is zipped.  Skipping.
+[    8.97] packages: (While processing egg plone.app.contentlisting) Package 'plone' is zipped.  Skipping.
+[    8.97] packages: (While processing egg plone.app.contentmenu) Package 'plone/app' is zipped.  Skipping.
+[    8.97] packages: (While processing egg plone.app.contentmenu) Package 'plone' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.contentrules) Package 'plone/app' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.contentrules) Package 'plone' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.contenttypes) Package 'plone/app' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.contenttypes) Package 'plone' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.customerize) Package 'plone/app' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.customerize) Package 'plone' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.dexterity) Package 'plone/app' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.dexterity) Package 'plone' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.discussion) Package 'plone/app' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.discussion) Package 'plone' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.event) Package 'plone/app' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.event) Package 'plone' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.i18n) Package 'plone/app' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.i18n) Package 'plone' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.intid) Package 'plone/app' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.intid) Package 'plone' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.iterate) Package 'plone/app' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.iterate) Package 'plone' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.layout) Package 'plone/app' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.layout) Package 'plone' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.linkintegrity) Package 'plone/app' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.linkintegrity) Package 'plone' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.lockingbehavior) Package 'plone/app' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.lockingbehavior) Package 'plone' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.multilingual) Package 'plone/app' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.multilingual) Package 'plone' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.portlets) Package 'plone/app' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.portlets) Package 'plone' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.querystring) Package 'plone/app' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.querystring) Package 'plone' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.redirector) Package 'plone/app' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.redirector) Package 'plone' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.registry) Package 'plone/app' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.registry) Package 'plone' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.relationfield) Package 'plone/app' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.relationfield) Package 'plone' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.testing) Package 'plone/app' is zipped.  Skipping.
+[    8.98] packages: (While processing egg plone.app.testing) Package 'plone' is zipped.  Skipping.
+[    8.99] packages: (While processing egg plone.app.textfield) Package 'plone/app' is zipped.  Skipping.
+[    8.99] packages: (While processing egg plone.app.textfield) Package 'plone' is zipped.  Skipping.
+[    8.99] packages: (While processing egg plone.app.theming) Package 'plone/app' is zipped.  Skipping.
+[    8.99] packages: (While processing egg plone.app.theming) Package 'plone' is zipped.  Skipping.
+[    8.99] packages: (While processing egg plone.app.users) Package 'plone/app' is zipped.  Skipping.
+[    8.99] packages: (While processing egg plone.app.users) Package 'plone' is zipped.  Skipping.
+[    8.99] packages: (While processing egg plone.app.uuid) Package 'plone/app' is zipped.  Skipping.
+[    8.99] packages: (While processing egg plone.app.uuid) Package 'plone' is zipped.  Skipping.
+[    8.99] packages: (While processing egg plone.app.versioningbehavior) Package 'plone/app' is zipped.  Skipping.
+[    8.99] packages: (While processing egg plone.app.versioningbehavior) Package 'plone' is zipped.  Skipping.
+[    8.99] packages: (While processing egg plone.app.viewletmanager) Package 'plone/app' is zipped.  Skipping.
+[    8.99] packages: (While processing egg plone.app.viewletmanager) Package 'plone' is zipped.  Skipping.
+[    8.99] packages: (While processing egg plone.app.vocabularies) Package 'plone/app' is zipped.  Skipping.
+[    8.99] packages: (While processing egg plone.app.vocabularies) Package 'plone' is zipped.  Skipping.
+[    8.99] packages: (While processing egg plone.app.widgets) Package 'plone/app' is zipped.  Skipping.
+[    8.99] packages: (While processing egg plone.app.widgets) Package 'plone' is zipped.  Skipping.
+[    8.99] packages: (While processing egg plone.app.workflow) Package 'plone/app' is zipped.  Skipping.
+[    8.99] packages: (While processing egg plone.app.workflow) Package 'plone' is zipped.  Skipping.
+[    8.99] packages: (While processing egg plone.app.z3cform) Package 'plone/app' is zipped.  Skipping.
+[    8.99] packages: (While processing egg plone.app.z3cform) Package 'plone' is zipped.  Skipping.
+[    8.99] packages: (While processing egg plone.autoform) Package 'plone' is zipped.  Skipping.
+[    8.99] packages: (While processing egg plone.batching) Package 'plone' is zipped.  Skipping.
+[    8.99] packages: (While processing egg plone.behavior) Package 'plone' is zipped.  Skipping.
+[    8.99] packages: (While processing egg plone.base) Package 'plone' is zipped.  Skipping.
+[    8.99] packages: (While processing egg plone.browserlayer) Package 'plone' is zipped.  Skipping.
+[    8.99] packages: (While processing egg plone.cachepurging) Package 'plone' is zipped.  Skipping.
+[    8.99] packages: (While processing egg plone.caching) Package 'plone' is zipped.  Skipping.
+[    8.99] packages: (While processing egg plone.classicui) Package 'plone' is zipped.  Skipping.
+[    8.99] packages: (While processing egg plone.contentrules) Package 'plone' is zipped.  Skipping.
+[    8.99] packages: (While processing egg plone.dexterity) Package 'plone' is zipped.  Skipping.
+[    8.99] packages: (While processing egg plone.distribution) Package 'plone' is zipped.  Skipping.
+[    8.99] packages: (While processing egg plone.event) Package 'plone' is zipped.  Skipping.
+[    9.00] packages: (While processing egg plone.exportimport) Package 'plone' is zipped.  Skipping.
+[    9.00] packages: (While processing egg plone.folder) Package 'plone' is zipped.  Skipping.
+[    9.00] packages: (While processing egg plone.formwidget.namedfile) Package 'plone/formwidget' is zipped.  Skipping.
+[    9.00] packages: (While processing egg plone.formwidget.namedfile) Package 'plone' is zipped.  Skipping.
+[    9.00] packages: (While processing egg plone.i18n) Package 'plone' is zipped.  Skipping.
+[    9.00] packages: (While processing egg plone.indexer) Package 'plone' is zipped.  Skipping.
+[    9.00] packages: (While processing egg plone.intelligenttext) Package 'plone' is zipped.  Skipping.
+[    9.00] packages: (While processing egg plone.keyring) Package 'plone' is zipped.  Skipping.
+[    9.00] packages: (While processing egg plone.locking) Package 'plone' is zipped.  Skipping.
+[    9.00] packages: (While processing egg plone.memoize) Package 'plone' is zipped.  Skipping.
+[    9.00] packages: (While processing egg plone.namedfile) Package 'plone' is zipped.  Skipping.
+[    9.00] packages: (While processing egg plone.outputfilters) Package 'plone' is zipped.  Skipping.
+[    9.00] packages: (While processing egg plone.portlet.collection) Package 'plone/portlet' is zipped.  Skipping.
+[    9.00] packages: (While processing egg plone.portlet.collection) Package 'plone' is zipped.  Skipping.
+[    9.00] packages: (While processing egg plone.portlet.static) Package 'plone/portlet' is zipped.  Skipping.
+[    9.00] packages: (While processing egg plone.portlet.static) Package 'plone' is zipped.  Skipping.
+[    9.00] packages: (While processing egg plone.portlets) Package 'plone' is zipped.  Skipping.
+[    9.00] packages: (While processing egg plone.protect) Package 'plone' is zipped.  Skipping.
+[    9.00] packages: (While processing egg plone.registry) Package 'plone' is zipped.  Skipping.
+[    9.00] packages: (While processing egg plone.resource) Package 'plone' is zipped.  Skipping.
+[    9.00] packages: (While processing egg plone.resourceeditor) Package 'plone' is zipped.  Skipping.
+[    9.00] packages: (While processing egg plone.rest) Package 'plone' is zipped.  Skipping.
+[    9.00] packages: (While processing egg plone.rfc822) Package 'plone' is zipped.  Skipping.
+[    9.00] packages: (While processing egg plone.scale) Package 'plone' is zipped.  Skipping.
+[    9.00] packages: (While processing egg plone.schema) Package 'plone' is zipped.  Skipping.
+[    9.01] packages: (While processing egg plone.schemaeditor) Package 'plone' is zipped.  Skipping.
+[    9.01] packages: (While processing egg plone.session) Package 'plone' is zipped.  Skipping.
+[    9.01] packages: (While processing egg plone.staticresources) Package 'plone' is zipped.  Skipping.
+[    9.01] packages: (While processing egg plone.stringinterp) Package 'plone' is zipped.  Skipping.
+[    9.01] packages: (While processing egg plone.subrequest) Package 'plone' is zipped.  Skipping.
+[    9.01] packages: (While processing egg plone.supermodel) Package 'plone' is zipped.  Skipping.
+[    9.01] packages: (While processing egg plone.testing) Package 'plone' is zipped.  Skipping.
+[    9.01] packages: (While processing egg plone.theme) Package 'plone' is zipped.  Skipping.
+[    9.01] packages: (While processing egg plone.transformchain) Package 'plone' is zipped.  Skipping.
+[    9.01] packages: (While processing egg plone.uuid) Package 'plone' is zipped.  Skipping.
+[    9.01] packages: (While processing egg plone.z3cform) Package 'plone' is zipped.  Skipping.
+[    9.01] packages: (While processing egg Products.CMFDiffTool) Package 'Products' is zipped.  Skipping.
+[    9.01] packages: (While processing egg Products.CMFDynamicViewFTI) Package 'Products' is zipped.  Skipping.
+[    9.01] packages: (While processing egg Products.CMFEditions) Package 'Products' is zipped.  Skipping.
+[    9.02] packages: (While processing egg Products.CMFUid) Package 'Products' is zipped.  Skipping.
+[    9.02] packages: (While processing egg Products.DateRecurringIndex) Package 'Products' is zipped.  Skipping.
+[    9.02] packages: (While processing egg Products.DCWorkflow) Package 'Products' is zipped.  Skipping.
+[    9.02] packages: (While processing egg Products.ExtendedPathIndex) Package 'Products' is zipped.  Skipping.
+[    9.02] packages: (While processing egg Products.GenericSetup) Package 'Products' is zipped.  Skipping.
+[    9.02] packages: (While processing egg Products.isurlinportal) Package 'Products' is zipped.  Skipping.
+[    9.02] packages: (While processing egg Products.MimetypesRegistry) Package 'Products' is zipped.  Skipping.
+[    9.02] packages: (While processing egg Products.PlonePAS) Package 'Products' is zipped.  Skipping.
+[    9.02] packages: (While processing egg Products.PluggableAuthService) Package 'Products' is zipped.  Skipping.
+[    9.02] packages: (While processing egg Products.PluginRegistry) Package 'Products' is zipped.  Skipping.
+[    9.02] packages: (While processing egg Products.PortalTransforms) Package 'Products' is zipped.  Skipping.
+[    9.02] packages: (While processing egg Products.statusmessages) Package 'Products' is zipped.  Skipping.
+[    9.02] packages: (While processing egg Products.ZopeVersionControl) Package 'Products' is zipped.  Skipping.
+[    9.02] packages: (While processing egg Zope) Link already exists (<bench>/runs/bo-uv/eggs/v5/Zope-6.2-py3.13-macosx-26.6-arm64.egg/Products -> <bench>/runs/bo-uv/parts/packages/Products).  Skipping.
+[    9.02] packages: (While processing egg zope.interface) Package 'zope' is zipped.  Skipping.
+[    9.02] packages: (While processing egg Products.CMFCore) Package 'Products' is zipped.  Skipping.
+[    9.02] packages: (While processing egg zope.structuredtext) Package 'zope' is zipped.  Skipping.
+[    9.02] packages: (While processing egg Products.StandardCacheManagers) Package 'Products' is zipped.  Skipping.
+[    9.03] packages: (While processing egg Products.Sessions) Package 'Products' is zipped.  Skipping.
+[    9.03] packages: (While processing egg Products.BTreeFolder2) Package 'Products' is zipped.  Skipping.
+[    9.03] packages: (While processing egg Products.ZCatalog) Package 'Products' is zipped.  Skipping.
+[    9.03] packages: (While processing egg Products.PythonScripts) Package 'Products' is zipped.  Skipping.
+[    9.03] packages: (While processing egg five.localsitemanager) Package 'five' is zipped.  Skipping.
+[    9.03] packages: (While processing egg Products.ExternalMethod) Package 'Products' is zipped.  Skipping.
+[    9.03] packages: (While processing egg zope.schema) Package 'zope' is zipped.  Skipping.
+[    9.03] packages: (While processing egg zope.globalrequest) Package 'zope' is zipped.  Skipping.
+[    9.03] packages: (While processing egg zope.intid) Package 'zope' is zipped.  Skipping.
+[    9.03] packages: (While processing egg zope.i18nmessageid) Package 'zope' is zipped.  Skipping.
+[    9.03] packages: (While processing egg zope.i18n) Package 'zope' is zipped.  Skipping.
+[    9.03] packages: (While processing egg zope.deprecation) Package 'zope' is zipped.  Skipping.
+[    9.03] packages: (While processing egg zope.deferredimport) Package 'zope' is zipped.  Skipping.
+[    9.03] packages: (While processing egg zope.cachedescriptors) Package 'zope' is zipped.  Skipping.
+[    9.03] packages: (While processing egg zope.app.locales) Package 'zope' is zipped.  Skipping.
+[    9.03] packages: (While processing egg z3c.form) Package 'z3c' is zipped.  Skipping.
+[    9.03] packages: (While processing egg z3c.caching) Package 'z3c' is zipped.  Skipping.
+[    9.03] packages: (While processing egg Products.SiteErrorLog) Package 'Products' is zipped.  Skipping.
+[    9.03] packages: (While processing egg plone.autoinclude) Package 'plone' is zipped.  Skipping.
+[    9.03] packages: (While processing egg zope.component) Package 'zope' is zipped.  Skipping.
+[    9.03] packages: (While processing egg zope.dottedname) Package 'zope' is zipped.  Skipping.
+[    9.03] packages: (While processing egg zope.copy) Package 'zope' is zipped.  Skipping.
+[    9.04] packages: (While processing egg zope.pagetemplate) Package 'zope' is zipped.  Skipping.
+[    9.04] packages: (While processing egg zope.browserpage) Package 'zope' is zipped.  Skipping.
+[    9.04] packages: (While processing egg zope.event) Package 'zope' is zipped.  Skipping.
+[    9.04] packages: (While processing egg zope.configuration) Package 'zope' is zipped.  Skipping.
+[    9.04] packages: (While processing egg zope.publisher) Package 'zope' is zipped.  Skipping.
+[    9.04] packages: (While processing egg zope.lifecycleevent) Package 'zope' is zipped.  Skipping.
+[    9.04] packages: (While processing egg zope.testbrowser) Package 'zope' is zipped.  Skipping.
+[    9.04] packages: (While processing egg zope.testing) Package 'zope' is zipped.  Skipping.
+[    9.04] packages: (While processing egg z3c.zcmlhook) Package 'z3c' is zipped.  Skipping.
+[    9.04] packages: (While processing egg zope.security) Package 'zope' is zipped.  Skipping.
+[    9.04] packages: (While processing egg zope.container) Package 'zope' is zipped.  Skipping.
+[    9.04] packages: (While processing egg zope.location) Package 'zope' is zipped.  Skipping.
+[    9.04] packages: (While processing egg zope.contentprovider) Package 'zope' is zipped.  Skipping.
+[    9.04] packages: (While processing egg z3c.unconfigure) Package 'z3c' is zipped.  Skipping.
+[    9.04] packages: (While processing egg zope.componentvocabulary) Package 'zope' is zipped.  Skipping.
+[    9.04] packages: (While processing egg zope.traversing) Package 'zope' is zipped.  Skipping.
+[    9.05] packages: (While processing egg z3c.formwidget.query) Package 'z3c' is zipped.  Skipping.
+[    9.05] packages: (While processing egg zope.viewlet) Package 'zope' is zipped.  Skipping.
+[    9.05] packages: (While processing egg Products.MailHost) Package 'Products' is zipped.  Skipping.
+[    9.05] packages: (While processing egg z3c.objpath) Package 'z3c' is zipped.  Skipping.
+[    9.05] packages: (While processing egg zope.browser) Package 'zope' is zipped.  Skipping.
+[    9.05] packages: (While processing egg zope.browsermenu) Package 'zope' is zipped.  Skipping.
+[    9.05] packages: (While processing egg zope.keyreference) Package 'zope' is zipped.  Skipping.
+[    9.05] packages: (While processing egg plone.formwidget.recurrence) Package 'plone/formwidget' is zipped.  Skipping.
+[    9.05] packages: (While processing egg plone.formwidget.recurrence) Package 'plone' is zipped.  Skipping.
+[    9.05] packages: (While processing egg zope.filerepresentation) Package 'zope' is zipped.  Skipping.
+[    9.05] packages: (While processing egg zope.tales) Package 'zope' is zipped.  Skipping.
+[    9.05] packages: (While processing egg zope.tal) Package 'zope' is zipped.  Skipping.
+[    9.05] packages: (While processing egg zope.size) Package 'zope' is zipped.  Skipping.
+[    9.05] packages: (While processing egg zope.site) Package 'zope' is zipped.  Skipping.
+[    9.05] packages: (While processing egg zope.sequencesort) Package 'zope' is zipped.  Skipping.
+[    9.05] packages: (While processing egg zope.ptresource) Package 'zope' is zipped.  Skipping.
+[    9.05] packages: (While processing egg zope.proxy) Package 'zope' is zipped.  Skipping.
+[    9.05] packages: (While processing egg zope.processlifetime) Package 'zope' is zipped.  Skipping.
+[    9.05] packages: (While processing egg zope.exceptions) Package 'zope' is zipped.  Skipping.
+[    9.05] packages: (While processing egg zope.datetime) Package 'zope' is zipped.  Skipping.
+[    9.05] packages: (While processing egg zope.contenttype) Package 'zope' is zipped.  Skipping.
+[    9.05] packages: (While processing egg zope.browserresource) Package 'zope' is zipped.  Skipping.
+[    9.05] packages: (While processing egg PasteDeploy) Package 'paste' is zipped.  Skipping.
+[    9.05] packages: Warning: (While processing egg cffi) Package '_cffi_backend' not found.  Skipping.
+[    9.06] packages: (While processing egg zope.hookable) Package 'zope' is zipped.  Skipping.
+[    9.06] packages: Warning: (While processing egg charset-normalizer) Package 'ada92cb5d92a588d1b93__mypyc' not found.  Skipping.
+[    9.06] packages: (While processing egg zope.sendmail) Package 'zope' is zipped.  Skipping.
+[    9.08] packages: (While processing egg jaraco.context) Package 'jaraco' is zipped.  Skipping.
+[    9.08] packages: (While processing egg jaraco.functools) Package 'jaraco' is zipped.  Skipping.
+[    9.08] packages: (While processing egg zc-buildout) Link already exists (<bench>/runs/bo-uv/.venv/lib/python3.13/site-packages/zc -> <bench>/runs/bo-uv/parts/packages/zc).  Skipping.
+[    9.08] Updating releaser.
+[    9.15] Generated script '<bench>/runs/bo-uv/bin/manage'.
+[    9.15] Generated script '<bench>/runs/bo-uv/bin/addchangelogentry'.
+[    9.15] Generated script '<bench>/runs/bo-uv/bin/bumpversion'.
+[    9.15] Generated script '<bench>/runs/bo-uv/bin/fullrelease'.
+[    9.15] Generated script '<bench>/runs/bo-uv/bin/lasttagdiff'.
+[    9.15] Generated script '<bench>/runs/bo-uv/bin/lasttaglog'.
+[    9.15] Generated script '<bench>/runs/bo-uv/bin/longtest'.
+[    9.15] Generated script '<bench>/runs/bo-uv/bin/postrelease'.
+[    9.16] Generated script '<bench>/runs/bo-uv/bin/prerelease'.
+[    9.16] Generated script '<bench>/runs/bo-uv/bin/release'.
+[    9.16] Generated script '<bench>/runs/bo-uv/bin/pocompile'.
+[    9.16] Generated script '<bench>/runs/bo-uv/bin/pyroma'.
+[    9.16] Generated script '<bench>/runs/bo-uv/bin/pep440'.
+[    9.16] Generated script '<bench>/runs/bo-uv/bin/check-manifest'.
+[    9.16] Generated script '<bench>/runs/bo-uv/bin/twine'.
+[    9.16] Generated script '<bench>/runs/bo-uv/bin/pyproject-build'.
+[    9.16] Generated script '<bench>/runs/bo-uv/bin/docutils'.
+[    9.17] Generated script '<bench>/runs/bo-uv/bin/rst2html'.
+[    9.17] Generated script '<bench>/runs/bo-uv/bin/rst2html4'.
+[    9.17] Generated script '<bench>/runs/bo-uv/bin/rst2html5'.
+[    9.17] Generated script '<bench>/runs/bo-uv/bin/rst2latex'.
+[    9.17] Generated script '<bench>/runs/bo-uv/bin/rst2man'.
+[    9.17] Generated script '<bench>/runs/bo-uv/bin/rst2odt'.
+[    9.17] Generated script '<bench>/runs/bo-uv/bin/rst2pseudoxml'.
+[    9.17] Generated script '<bench>/runs/bo-uv/bin/rst2s5'.
+[    9.17] Generated script '<bench>/runs/bo-uv/bin/rst2xetex'.
+[    9.17] Generated script '<bench>/runs/bo-uv/bin/rst2xml'.
+[    9.18] Generated script '<bench>/runs/bo-uv/bin/trove-classifiers'.
+[    9.18] Generated script '<bench>/runs/bo-uv/bin/pygmentize'.
+[    9.18] Generated script '<bench>/runs/bo-uv/bin/keyring'.
+[    9.18] Generated script '<bench>/runs/bo-uv/bin/idna'.
+[    9.18] Generated script '<bench>/runs/bo-uv/bin/normalizer'.
+[    9.18] Generated script '<bench>/runs/bo-uv/bin/towncrier'.
+[    9.18] Generated script '<bench>/runs/bo-uv/bin/markdown-it'.
+[    9.18] Generated script '<bench>/runs/bo-uv/bin/cffi-gen-src'.
+[    9.18] Generated script '<bench>/runs/bo-uv/bin/pip'.
+[    9.18] Generated script '<bench>/runs/bo-uv/bin/pip3'.
+[    9.19] Generated script '<bench>/runs/bo-uv/bin/wheel'.
+[    9.19] Generated script '<bench>/runs/bo-uv/bin/buildout'.
+[    9.19] Updating z3c_checkversions.
+[    9.23] Updating ploneversioncheck.
+[    9.27] Updating dependencies.
+[    9.31] Generated script '<bench>/runs/bo-uv/bin/dependencychecker'.
+[    9.31] Updating zodbupdate.
+[    9.66] Generated script '<bench>/runs/bo-uv/bin/zodbupdate'.
+[    9.66] Generated script '<bench>/runs/bo-uv/bin/zodbverify'.
+[    9.66] Updating vscode.
+# exit 0 after 9.81s

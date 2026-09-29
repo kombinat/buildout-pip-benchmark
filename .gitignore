@@ -1,0 +1,16 @@
+# Generated / reproducible with setup.sh and the series scripts
+export/
+srcref/
+runs/
+caches/
+tools/
+uvbin/
+coredev.tmp/
+startup_script.py
+logs/.prev
+logs/.now
+__pycache__/
+.DS_Store
+
+# raw run logs are part of the results (overrides a global *.log ignore)
+!logs/*.log
