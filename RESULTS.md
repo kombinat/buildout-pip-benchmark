@@ -210,6 +210,8 @@ The benchmark works around this by pinning the four distributions to the version
 
 ## Reproducing
 
+Step-by-step instructions: see [README.md](README.md#running-the-benchmarks).
+
 Requirements: git, make, uv ≥ 0.12.11 on `PATH` (for mxmake), and CPython 3.13. Set `BENCH_PYTHON` to the
 interpreter path, otherwise `python3.13` from `PATH` is used.
 
