@@ -24,7 +24,9 @@ from pathlib import Path
 
 B = Path(__file__).resolve().parent
 # Interpreter for all methods (the published results used a uv-managed CPython 3.13.9).
-PY = os.environ.get("BENCH_PYTHON") or shutil.which("python3.13")
+# Resolved, because a venv created through a symlink outside the Python prefix
+# (e.g. uv's ~/.local/bin/python3.13) gets that dir as home and cannot find its stdlib.
+PY = os.path.realpath(os.environ.get("BENCH_PYTHON") or shutil.which("python3.13"))
 BUILDOUT_VERSION = "5.3.0a1"
 UV_VERSION = "0.12.19"
 BOOTSTRAP = [
@@ -135,6 +137,9 @@ def main():
                 buildout = ".venv/bin/buildout"
             else:
                 buildout = "bin/buildout"
+                if not (proj / buildout).exists():
+                    log.write(f"# {buildout} missing, previous run failed\n")
+                    rc = 1
             if rc == 0:
                 rc, steps["buildout"] = run(
                     [buildout, *extra, *BUILDOUT_ARGS], proj, env, log, lines)
